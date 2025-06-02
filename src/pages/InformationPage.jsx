@@ -69,7 +69,7 @@ const InformationPage = () => {
 								direction="top"
 								imgClass="w-64 -translate-y-[65%]"
 							>
-								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary">
+								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary font-DenkOne">
 									<li>Sinh viên Đại học FPT Hà Nội</li>
 								</ul>
 							</InfoCard>
@@ -79,7 +79,7 @@ const InformationPage = () => {
 								direction="bottom"
 								imgClass="w-48 -translate-y-[150%] lg:-translate-y-0 lg:-bottom-[25%]"
 							>
-								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary">
+								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary font-DenkOne">
 									<li>
 										Hình thức thi đấu: Thi đấu theo đội (3 - 4 thành viên/đội).
 									</li>
@@ -95,7 +95,7 @@ const InformationPage = () => {
 								direction="top"
 								imgClass="w-[500px] -top-[35%]"
 							>
-								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary">
+								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary font-DenkOne">
 									<li>
 										Đăng ký tham gia: Đăng ký theo đội 3 - 4 người hoặc đăng ký
 										cá nhân (BTC sẽ hỗ trợ ghép đội).

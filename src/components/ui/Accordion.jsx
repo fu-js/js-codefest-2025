@@ -171,7 +171,7 @@ function FAQItem({ item, isOpen, onToggle }) {
 								animate={{ y: 0 }}
 								exit={{ y: -10 }}
 								transition={{ duration: 0.2 }}
-								className="text-base-content text-sm md:text-lg leading-relaxed"
+								className="text-base-content text-sm md:text-lg leading-relaxed font-DenkOne"
 								dangerouslySetInnerHTML={{ __html: item.answer }}
 							></motion.p>
 						</div>

@@ -24,12 +24,17 @@
 	font-family: "EasyCome";
 	src: url("./assets/fonts/EasyCome.ttf") format("truetype");
 }
+@font-face {
+	font-family: "DenkOne";
+	src: url("./assets/fonts/DenkOne.ttf") format("truetype");
+}
 
 @theme {
 	--font-HP: "Harry Potter", sans-serif;
 	--font-Teddy: "Teddy Bear", sans-serif;
 	--font-Treacherous: "Treacherous Curves", sans-serif;
 	--font-EasyCome: "EasyCome", sans-serif;
+	--font-DenkOne: "DenkOne", sans-serif;
 }
 
 @theme inline {
@@ -44,5 +49,5 @@
 }
 
 .icon-fill {
-	fill: #92ACFA !important;
+	fill: #92acfa !important;
 }
