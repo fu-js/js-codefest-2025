@@ -76,7 +76,7 @@ const Homepage = () => {
 					></div>
 
 					<motion.img
-						className="absolute bottom-[-4%] w-600 h-200 z-10 hidden md:block "
+						className="absolute bottom-[-4%] w-full h-full z-10 hidden lg:block "
 						style={{
 							backgroundImage: `url(${light})`,
 							backgroundSize: "contain",
@@ -91,7 +91,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.5}
 						factorY={0.3}
-						className="absolute top-[-15%] left-[-15%] w-180 h-200 z-10 hidden md:block"
+						className="absolute top-[-15%] left-[-15%] w-180 h-200 z-10 hidden lg:block"
 					>
 						<motion.img src={tree2} alt="tree" style={{ x: turnR }} />
 					</MouseParallaxChild>
@@ -99,7 +99,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.2}
 						factorY={0.4}
-						className="absolute top-[10%] left-[-5%] md:left-[5%] w-160 h-180 z-10 hidden md:block "
+						className="absolute top-[10%] left-[-5%] md:left-0 w-3xl h-xl z-10 hidden lg:block "
 					>
 						<motion.img
 							src={drG}
@@ -111,7 +111,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.2}
 						factorY={0.4}
-						className="absolute right-0 lg:right-[15%] w-xl h-xl z-10 hidden md:block "
+						className="absolute right-0 lg:right-[15%] w-3xl h-xl z-10 hidden lg:block"
 					>
 						<motion.img
 							src={tran}
@@ -124,14 +124,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.1}
 						factorY={0.3}
-						className="absolute top-[28%] right-[2%] w-180 h-200 z-10 hidden md:block "
-						// style={{
-						// 	backgroundImage: `url(${da})`,
-						// 	backgroundRepeat: "no-repeat",
-						// 	backgroundSize: "contain",
-						// 	backgroundPosition: "center",
-						// 	opacity: 0.9,
-						// }}
+						className="absolute right-[-5%] top-[60%] w-xl h-xl z-[15] hidden lg:block"
 					>
 						<motion.img src={da} alt="da" style={{ x: turnL }} />
 					</MouseParallaxChild>
@@ -139,7 +132,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.5}
 						factorY={0.3}
-						className="absolute top-[0%] right-[-20%] w-180 h-200 z-10 hidden md:block "
+						className="absolute top-[0%] right-[-20%] w-180 h-200 z-10 hidden lg:block "
 					>
 						<motion.img src={tree1} alt="tree" style={{ x: turnL }} />
 					</MouseParallaxChild>
@@ -147,14 +140,13 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.1}
 						factorY={0.3}
-						className="absolute w-420 bottom-[-44%] right-[-8%] h-180 z-10 hidden md:block "
+						className="absolute w-screen bottom-[-44%] left-0 right-0 h-180 z-10 hidden lg:block "
 					>
 						<motion.img
 							src={stone}
 							alt="stone"
 							style={{ translateX: turnR }}
-							className="absolute 
-						bottom-[44%]
+							className="w-screen absolute bottom-[44%]
 						"
 						/>
 					</MouseParallaxChild>
@@ -162,18 +154,8 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.1}
 						factorY={0.3}
-						className="absolute left-0 right-0 bottom-0 z-10 hidden md:block "
+						className="absolute left-0 right-0 bottom-0 z-10 hidden lg:block "
 					>
-						{/* <div
-							className="absolute w-300 bottom-[0%] left-[10.3%] h-90 z-10"
-							style={{
-								backgroundImage: `url(${land})`,
-								backgroundSize: "contain",
-								backgroundPosition: "center",
-								backgroundRepeat: "no-repeat",
-							}}
-						></div> */}
-
 						<motion.img src={land} alt="land" style={{ translateX: turnL }} />
 
 						<a href="/intro">
@@ -203,7 +185,7 @@ const Homepage = () => {
 					</MouseParallaxChild>
 
 					<motion.div
-						className="font-Treacherous text-xl fixed left-0 right-0 bottom-[20%] md:bottom-[15%] h-30 z-10 w-full md:flex md:justify-between"
+						className="font-Treacherous text-xl fixed left-0 right-0 bottom-[20%] md:bottom-[15%] h-30 z-[20] w-full md:flex md:justify-between"
 						style={{ scale, y }}
 					>
 						<CountdownTimer />

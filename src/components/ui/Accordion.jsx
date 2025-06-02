@@ -198,7 +198,7 @@ export default function FAQ() {
 	};
 
 	return (
-		<div className="min-w-md max-w-md md:min-w-2xl md:max-w-2xl lg:min-w-4xl lg:max-w-4xl mx-auto z-[1000]">
+		<div className="min-w-sm max-w-sm md:max-w-md lg:min-w-2xl lg:max-w-2xl xl:min-w-4xl xl:max-w-4xl mx-auto z-[1000]">
 			<motion.div
 				className="space-y-4"
 				initial={{ opacity: 0 }}

@@ -14,7 +14,7 @@ import {
 const words = [
 	{
 		text: "TIME",
-		className: "font-HP tracking-wider text-primary",
+		className: "font-HP tracking-wider text-secondary",
 	},
 	{
 		text: "LINE",
