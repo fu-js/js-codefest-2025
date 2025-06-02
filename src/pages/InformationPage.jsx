@@ -30,7 +30,7 @@ const words = [
 	},
 	{
 		text: "THI",
-		className: "font-HP tracking-wider text-secondary",
+		className: "font-HP tracking-wider text-primary",
 	},
 ];
 
@@ -41,14 +41,16 @@ const InformationPage = () => {
 		<div
 			id="information"
 			ref={ref}
-			style={{
-				backgroundImage: `url(${bg})`,
-				backgroundSize: "cover",
-				backgroundPosition: "center",
-				backgroundRepeat: "no-repeat",
-				backgroundAttachment: "fixed",
-			}}
-			className="w-full min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-base-200 py-18"
+			style={
+				{
+					// backgroundImage: `url(${bg})`,
+					// backgroundSize: "cover",
+					// backgroundPosition: "center",
+					// backgroundRepeat: "no-repeat",
+					// backgroundAttachment: "fixed",
+				}
+			}
+			className="w-full min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-base-300 py-18"
 		>
 			<AnimatePresence mode="wait">
 				{isViewed && (
@@ -62,50 +64,62 @@ const InformationPage = () => {
 						>
 							<TypewriterEffect words={words} />
 						</motion.div>
-						<motion.div className="relative  lg:flex-row flex-col gap-y-44 items-center justify-center flex w-1/2 md:w-full md:gap-x-12">
+						<motion.div className="relative lg:flex-row flex-col gap-y-44 items-center justify-center flex w-1/2 md:w-full md:gap-x-12">
 							<InfoCard
 								image={hero}
-								title="Đối tượng tham gia"
+								title="Đối tượng <br /> tham gia"
+								tClass="text-4xl mt-12"
+								pClass="text-xl"
 								direction="top"
-								imgClass="w-64 -translate-y-[65%]"
+								imgClass="w-56 -translate-y-[65%]"
 							>
-								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary font-DenkOne">
-									<li>Sinh viên Đại học FPT Hà Nội</li>
+								<ul class="space-y-3 font-DenkOne mt-6">
+									<li className="text-center">Sinh viên toàn miền Bắc</li>
 								</ul>
 							</InfoCard>
 							<InfoCard
 								image={bang}
-								title="Hình thức tham gia"
+								title="Hình thức <br /> tham gia"
+								tClass="text-4xl mt-12"
+								pClass="text-xl mt-6"
 								direction="bottom"
-								imgClass="w-48 -translate-y-[150%] lg:-translate-y-0 lg:-bottom-[25%]"
+								imgClass="w-48 -translate-y-[150%] lg:-translate-y-8 lg:-bottom-[25%]"
 							>
-								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary font-DenkOne">
-									<li>
-										Hình thức thi đấu: Thi đấu theo đội (3 - 4 thành viên/đội).
-									</li>
-									<li>
-										Những thí sinh đăng ký cá nhân sẽ được BTC hỗ trợ ghép đội
-										phù hợp.
+								<ul class="space-y-3 font-DenkOne mb-6">
+									<li className="text-center">
+										Thi đấu theo đội <br /> (4 - 5 thành viên/đội)
 									</li>
 								</ul>
 							</InfoCard>
 							<InfoCard
 								image={cong}
-								title="Hình thức tham gia"
+								title="Hình thức <br /> tổ chức"
+								tClass="text-4xl "
+								pClass="text-xl"
 								direction="top"
 								imgClass="w-[500px] -top-[35%]"
 							>
-								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary font-DenkOne">
-									<li>
-										Đăng ký tham gia: Đăng ký theo đội 3 - 4 người hoặc đăng ký
-										cá nhân (BTC sẽ hỗ trợ ghép đội).
+								<ul class="space-y-3 font-DenkOne">
+									<li className="text-center">
+										<span className="font-bold text-secondary">
+											Đăng ký tham gia:
+										</span>
+										<br />
+										Đăng ký theo đội 4 - 5 người
 									</li>
-									<li>
-										Vòng Training: Tham gia các buổi training Online và 1 buổi
-										thi thử Offline tại Đại học FPT Hà Nội.
+									<li className="ml-8">
+										<ul className="list-disc marker:text-secondary">
+											<li>Tham gia các buổi training Online</li>
+
+											<li>1 buổi thi thử Online</li>
+										</ul>
 									</li>
-									<li>
-										Vòng Chung kết: Tổ chức Offline tại Đại học FPT Hà Nội.
+									<li className="text-center">
+										<span className="font-bold text-secondary">
+											Vòng Chung kết:
+										</span>
+										<br />
+										Tổ chức Offline tại Đại học FPT Hà Nội.
 									</li>
 								</ul>
 							</InfoCard>

@@ -71,16 +71,18 @@ const ReasonPage = () => {
 			<motion.div
 				ref={ref}
 				id="reason"
-				className="relative flex flex-col items-center justify-center min-h-screen scroll-smooth overflow-hidden bg-base-200 pt-44 md:pt-0"
-				style={{
-					backgroundImage: `url(${bg})`,
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-					backgroundRepeat: "no-repeat",
-					backgroundAttachment: "fixed",
-					// scale,
-					// y,
-				}}
+				className="relative flex flex-col items-center justify-center min-h-screen scroll-smooth overflow-hidden bg-base-300 pt-44 md:pt-0"
+				style={
+					{
+						// backgroundImage: `url(${bg})`,
+						// backgroundSize: "cover",
+						// backgroundPosition: "center",
+						// backgroundRepeat: "no-repeat",
+						// backgroundAttachment: "fixed",
+						// scale,
+						// y,
+					}
+				}
 			>
 				<motion.div className="w-full relative flex flex-col items-center justify-center">
 					<motion.div
