@@ -1,6 +1,5 @@
 // TimelinePage.jsx
 import { motion, useInView, AnimatePresence } from "motion/react";
-//import bg from "../assets/images/reasons/bg/2.png";
 import bg from "../assets/images/nencover_resize.png";
 import dragon from "../assets/images/dragon.webp";
 import { TypewriterEffect } from "../components/ui/TextGenerate";

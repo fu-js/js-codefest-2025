@@ -62,7 +62,7 @@ export default function TimelineBar() {
 						</svg>
 					</div>
 					<div
-						className="timeline-end mb-14 ml-6 text-xl"
+						className="timeline-end md:mb-10 text-xl"
 						style={{ lineHeight: 2 }}
 					>
 						<div

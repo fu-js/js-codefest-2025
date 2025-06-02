@@ -6,7 +6,6 @@ import {
 	useTransform,
 	useInView,
 } from "motion/react";
-//import bg from "../assets/images/reasons/bg/2.png";
 import bg from "../assets/images/nencover_resize.png";
 import hero from "../assets/images/hero3.webp";
 
@@ -83,10 +82,7 @@ const ReasonPage = () => {
 					// y,
 				}}
 			>
-				<motion.div
-					// className="absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-cover bg-center"
-					className="w-full relative flex flex-col items-center justify-center"
-				>
+				<motion.div className="w-full relative flex flex-col items-center justify-center">
 					<motion.div
 						initial={{ opacity: 0, x: -100, scale: 0.5 }}
 						whileInView={{ opacity: 1, x: 0, scale: 1 }}

@@ -2,7 +2,7 @@
 import bg from "../assets/images/nencover_resize.png";
 const Footer = () => {
 	return (
-		<footer className="bg-base-100 font-DenkOne px-4 py-8 overflow-hidden border-t-2 border-primary text-white stroke-1 stroke-primary">
+		<footer className="bg-base-100 bg-cover bg-center font-DenkOne px-4 py-8 overflow-hidden border-t-2 border-primary text-white stroke-1 stroke-primary z-[1000]">
 			<div className="flex flex-col lg:flex-row gap-6 lg:gap-16 justify-center items-center container mx-auto">
 				<a
 					href="https://www.facebook.com/fu.jsclub"
