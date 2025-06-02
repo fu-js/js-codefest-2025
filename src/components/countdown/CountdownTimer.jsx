@@ -49,12 +49,12 @@ export default function Countdown() {
 		return () => clearInterval(timer);
 	}, [deadline]);
 	return (
-		<div className="flex justify-center gap-36 md:justify-between items-center w-full max-w-4xl md:max-w-7xl mx-auto">
-			<div className="flex flex-col md:flex-row justify-between items-center">
+		<div className="flex justify-center gap-44 lg:justify-between items-center w-full max-w-4xl lg:max-w-7xl mx-auto">
+			<div className="flex flex-col lg:flex-row justify-between items-center">
 				<TimeBlock label="Ngày">{timeLeft.days}</TimeBlock>
 				<TimeBlock label="Giờ">{timeLeft.hrs}</TimeBlock>
 			</div>
-			<div className="flex flex-col md:flex-row justify-between items-center">
+			<div className="flex flex-col lg:flex-row justify-between items-center">
 				<TimeBlock label="Phút">{timeLeft.mins}</TimeBlock>
 				<TimeBlock label="Giây">{timeLeft.secs}</TimeBlock>
 			</div>

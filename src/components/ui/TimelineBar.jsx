@@ -1,10 +1,9 @@
 export default function TimelineBar() {
 	return (
-
-		<div className="md:px-60">
-			<ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical z-[2]">
+		<div className="w-full lg:pr-60">
+			<ul className="timeline timeline-snap-icon max-lg:timeline-compact timeline-vertical z-[2]">
 				<li>
-					<div className="timeline-middle btn btn-circle btn-accent">
+					<div className="timeline-middle btn btn-circle btn-success">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
@@ -20,33 +19,35 @@ export default function TimelineBar() {
 					</div>
 
 					<div
-
-						className="timeline-start mb-14 md:text-end text-xl"
+						className="timeline-end mb-14 ml-6 text-xl"
 						style={{ lineHeight: 2 }}
 					>
-						<time className="font-HP italic text-secondary text-2xl btn btn-outline mb-2">
-							13/08 - 31/08
-						</time>
 						<div
-							className="text-md md:text-4xl font-black text-primary font-Treacherous mb-6"
+							className="text-4xl font-black text-warning font-Treacherous mb-2"
 							style={{ lineHeight: 1.5 }}
 						>
 							Mở đơn đăng ký
 						</div>
-
-						<p className="hidden md:block text-2sm md:text-l leading-[2rem] font-sans">
-							Các thí sinh đăng ký cá nhân hoặc theo đội (3 - 4 thành viên/đội).{" "}
-							Đối với các thí sinh đăng ký tự do, BTC sẽ hỗ trợ ghép đội cho phù
-							hợp.
-						</p>
+						<div className="font-HP text-xl md:text-2xl btn btn-success">
+							13/08 - 31/08
+						</div>
+						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success hidden lg:block md:text-l leading-[2rem]">
+							<li>
+								Các thí sinh đăng ký cá nhân hoặc theo đội (3 - 4 thành
+								viên/đội).
+							</li>
+							<li>
+								Đối với các thí sinh đăng ký tự do, BTC sẽ hỗ trợ ghép đội cho
+								phù hợp.
+							</li>
+						</ul>
 					</div>
-					<hr className="bg-primary" />
+					<hr className="bg-success" />
 				</li>
 				<li>
-					<hr className="bg-primary" />
+					<hr className="bg-success" />
 
-					<div className="timeline-middle btn btn-circle">
-
+					<div className="timeline-middle btn btn-circle btn-success">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
@@ -61,36 +62,39 @@ export default function TimelineBar() {
 						</svg>
 					</div>
 					<div
-
 						className="timeline-end md:mb-10 text-xl"
 						style={{ lineHeight: 2 }}
 					>
-						<time className="font-HP italic text-secondary text-2xl btn btn-outline mb-2">
-
-							01/09 - 14/09
-						</time>
 						<div
-							className="text-4xl font-black text-primary font-Treacherous mb-6"
+							className="text-4xl font-black text-warning font-Treacherous mb-2"
 							style={{ lineHeight: 1.5 }}
 						>
 							Giai đoạn Training
 						</div>
-
-						<p className="hidden md:block text-l text-2sm leading-[1.75rem] font-sans">
-							Sau khi kết thúc vòng đăng ký, các đội thi bước vào vòng training
-							với sự hướng dẫn của những mentor dày dặn kinh nghiệm, được cung
-							cấp hướng dẫn chi tiết về cách thức lập trình và tối ưu hóa con
-							bot, cũng như chiến lược thu thập vật phẩm, và chiến đấu trên các
-							bản đồ. Đồng thời các đội thi sẽ phát triển và tối ưu con bot của
-							riêng mình.
-						</p>
+						<div className="font-HP text-xl md:text-2xl btn btn-success">
+							01/09 - 14/09
+						</div>
+						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success hidden lg:block text-xl leading-[2rem]">
+							<li>
+								Sau khi kết thúc vòng đăng ký, các đội thi bước vào vòng
+								training với sự hướng dẫn của những mentor dày dặn kinh nghiệm.
+							</li>
+							<li>
+								Các đội thi sẽ được cung cấp hướng dẫn chi tiết về cách thức lập
+								trình và tối ưu hóa con bot, cũng như chiến lược thu thập vật
+								phẩm, và chiến đấu trên các bản đồ.
+							</li>
+							<li>
+								Đồng thời các đội thi sẽ phát triển và tối ưu con bot của riêng
+								mình.
+							</li>
+						</ul>
 					</div>
-					<hr className="bg-primary" />
+					<hr className="bg-success" />
 				</li>
 				<li>
-					<hr className="bg-primary" />
-					<div className="timeline-middle btn btn-circle">
-
+					<hr className="bg-success" />
+					<div className="timeline-middle btn btn-circle btn-success">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 26 24"
@@ -104,31 +108,30 @@ export default function TimelineBar() {
 							/>
 						</svg>
 					</div>
-					<div
-
-						className="timeline-start mb-10 md:text-end text-xl"
-						style={{ lineHeight: 2 }}
-					>
-						<time className="font-HP italic text-secondary text-2xl btn btn-outline mb-2">
-							15/09/2024
-
-						</time>
+					<div className="timeline-end ml-6 text-xl" style={{ lineHeight: 2 }}>
 						<div
-							className="text-4xl font-black text-primary font-Treacherous mb-6"
+							className="text-4xl font-black text-warning font-Treacherous mb-2"
 							style={{ lineHeight: 1.5 }}
 						>
 							Vòng Chung kết
 						</div>
-						<p className="font-sans hidden md:block text-2sm leading-[1.75rem]">
-							Các đội chơi tham gia thi đấu chính thức tại trường Đại học FPT Hà
-							Nội. Đây là lúc các đội đem những con bot mình đã chuẩn bị để
-							tranh tài cùng nhau trên chiến trường khốc liệt.
+						<div className="font-HP text-xl md:text-2xl btn btn-success">
+							15/09/2025
+						</div>
+						<p className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success hidden lg:block leading-[2rem]">
+							<li>
+								Các đội chơi tham gia thi đấu chính thức tại trường Đại học FPT
+								Hà Nội.
+							</li>
+							<li>
+								Đây là lúc các đội đem những con bot mình đã chuẩn bị để tranh
+								tài cùng nhau trên chiến trường khốc liệt.
+							</li>
 						</p>
 					</div>
-					<hr className="bg-primary" />
+					{/* <hr className="bg-success" /> */}
 				</li>
 			</ul>
-
 		</div>
 	);
 }

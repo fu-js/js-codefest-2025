@@ -16,8 +16,7 @@ import da from "../assets/images/da2_bg.webp";
 import light from "../assets/images/cloud_light.webp";
 import font from "../assets/images/font.png";
 import nut from "../assets/images/khung.png";
-import light2 from "../assets/images/2cloud_light.png";
-
+import light2 from "../assets/images/cloud_light.png";
 
 import {
 	MouseParallaxContainer,
@@ -48,9 +47,7 @@ const Homepage = () => {
 	const onBottom = useTransform(scrollY, [0, 500], [0, 1000]);
 	return (
 		<>
-			<div className="fixed top-0 left-0 w-full h-screen z-[-1] bg-[#1D2C48]"
-			>
-			</div>
+			<div className="fixed top-0 left-0 w-full h-screen z-[-1] bg-[#1D2C48]"></div>
 			<MouseParallaxContainer
 				globalFactorX={0.1}
 				globalFactorY={0.1}
@@ -64,18 +61,29 @@ const Homepage = () => {
 					className="w-full h-screen"
 				>
 					<div
-						className="bg inset-0 w-full h-full z-0 absolute"
+						className="bg inset-0 w-full h-full z-0 absolute hidden lg:block"
 						style={{
 							backgroundImage: `url(${bgImg})`,
 							backgroundSize: "cover",
+							backgroundPosition: "center",
+							backgroundRepeat: "no-repeat",
+							backgroundAttachment: "fixed",
+						}}
+					></div>
+					<div
+						className="bg inset-0 w-full h-full z-0 absolute block lg:hidden"
+						style={{
+							backgroundImage: `url(${bgImg2})`,
+							backgroundSize: "cover",
+							backgroundPosition: "center",
+
 							backgroundRepeat: "no-repeat",
 							backgroundAttachment: "fixed",
 						}}
 					></div>
 
-
 					<motion.img
-						className="absolute bottom-[-4%] left-[0%] w-600 h-200 z-10"
+						className="absolute bottom-[-4%] w-full h-full z-10 hidden lg:block"
 						style={{
 							backgroundImage: `url(${light2})`,
 							backgroundSize: "contain",
@@ -87,26 +95,10 @@ const Homepage = () => {
 						}}
 					/>
 
-					<motion.img
-						className="absolute bottom-[0%] left-[0%] w-600 h-200 z-10"
-						style={{
-							backgroundImage: `url(${light2})`,
-							backgroundSize: "contain",
-							backgroundPosition: "center",
-							transform: "scaleX(1)",
-
-							opacity: khoiOpacity,
-							// translateY: onTop,
-							// x: turnL,
-						}}
-					/>
-
 					<MouseParallaxChild
 						factorX={0.5}
 						factorY={0.3}
-
-						className="absolute top-[-15%] left-[-16%] w-180 h-200 z-10"
-
+						className="absolute top-[-15%] left-[-15%] w-180 h-200 z-10 hidden lg:block"
 					>
 						<motion.img src={tree2} alt="tree" style={{ x: turnR }} />
 					</MouseParallaxChild>
@@ -114,9 +106,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.2}
 						factorY={0.4}
-
-						className="absolute top-[10%] left-[5%] w-140 h-160 z-10"
-
+						className="absolute top-[10%] left-[-5%] md:left-0 w-3xl h-xl z-10 hidden lg:block"
 					>
 						<motion.img
 							src={drG}
@@ -126,11 +116,10 @@ const Homepage = () => {
 						/>
 					</MouseParallaxChild>
 
-
 					<MouseParallaxChild
 						factorX={0.5}
 						factorY={0.3}
-						className="absolute top-[0%] right-[-20%] w-180 h-200 z-10"
+						className="absolute top-[0%] right-[-20%] w-180 h-200 z-10 hidden lg:block"
 					>
 						<motion.img src={tree1} alt="tree" style={{ x: turnL }} />
 					</MouseParallaxChild>
@@ -138,8 +127,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.2}
 						factorY={0.4}
-						className="absolute right-[15%] top-[-6%] w-140 h-140 z-10"
-
+						className="absolute right-0 lg:right-[15%] w-3xl h-xl z-10 hidden lg:block"
 					>
 						<motion.img
 							src={tran}
@@ -150,161 +138,106 @@ const Homepage = () => {
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
-						
-						className="absolute w-420 bottom-[-45%] right-[-8%] h-180 z-10"
+						factorX={0.1}
+						factorY={0.3}
+						className="absolute right-[-5%] top-[60%] w-xl h-xl z-[15] hidden lg:block"
 					>
-						
+						<motion.img src={da} alt="da" style={{ x: turnL }} />
+					</MouseParallaxChild>
+
+					<MouseParallaxChild
+						factorX={0.5}
+						factorY={0.3}
+						className="absolute top-[0%] right-[-20%] w-180 h-200 z-10 hidden lg:block "
+					>
+						<motion.img src={tree1} alt="tree" style={{ x: turnL }} />
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
 						factorX={0.1}
 						factorY={0.3}
-						className="absolute bottom-[0%] z-10"
+						className="absolute w-screen bottom-[-44%] left-0 right-0 h-180 z-10 hidden lg:block "
 					>
-						{/* <div
-							className="absolute w-300 bottom-[0%] left-[10.3%] h-90 z-10"
-							style={{
-								backgroundImage: `url(${land})`,
-								backgroundSize: "contain",
-								backgroundPosition: "center",
-								backgroundRepeat: "no-repeat",
-							}}
-						></div> */}
-
-					</MouseParallaxChild>
-
-					{/* <div
-						className="fixed w-420 bottom-[-30%] left-[-6%] h-500 z-10"
-						style={{
-							backgroundImage: `url(${khoi})`,
-							backgroundSize: "contain",
-							backgroundPosition: "center",
-							backgroundRepeat: "no-repeat",
-						}}
-					></div> */}
-
-					<motion.img
+						<motion.img
 							src={stone}
 							alt="stone"
 							style={{ translateX: turnR }}
-							className="absolute z-10 right-[35%] cursor-pointer
-						bottom-[0%]
+							className="w-screen absolute bottom-[44%]
 						"
-					/>
+						/>
+					</MouseParallaxChild>
 
-					<motion.img
-							src={stone}
-							alt="stone"
+					<MouseParallaxChild
+						factorX={0.1}
+						factorY={0.3}
+						className="absolute left-0 right-0 bottom-0 z-10 hidden lg:block"
+					>
+						<motion.img
+							src={land}
+							alt="land"
 							style={{ translateX: turnL }}
-							className="absolute z-10 left-[34%] cursor-pointer
-						bottom-[0%]
-						"
-					/>
+							className="w-screen"
+						/>
 
-					<motion.img src={land} alt="land" className="absolute bottom-[0%] z-10 " style={{ opacity: khoiOpacity }}/>
-
-					<a href="/intro">
-						<motion.div
-							className="absolute w-68 top-[30%] left-[39.4%] h-72 z-10 cursor-pointer"
+						<a href="/intro">
+							<motion.img
+								className="absolute w-68 left-1/2 translate-x-[-50%] md:bottom-[50%] h-72 z-10 cursor-pointer"
+								src={cong}
+								style={{
+									scale: scaleCong,
+								}}
+								transition={{ duration: 0.5, ease: "easeInOut" }}
+							/>
+						</a>
+						<motion.img
+							src={hero}
+							alt="hero"
+							className="absolute w-32 left-1/2 bottom-[40%] translate-x-[-50%] z-[11]"
 							style={{
-								backgroundImage: `url(${cong})`,
-								backgroundSize: "contain",
-								backgroundPosition: "center",
-								backgroundRepeat: "no-repeat",
-								// y: onTop,
+								opacity: khoiOpacity,
+								y,
 							}}
-						></motion.div>
-					</a>
+						/>
+						<motion.img
+							style={{ y, opacity: khoiOpacity }}
+							src={hrShadow}
+							alt="hrShadow"
+							className="absolute w-32 left-[50%] translate-x-[-60%] md:bottom-[20%] z-10"
+						/>
+					</MouseParallaxChild>
 
 					<motion.div
-						className="absolute w-80 bottom-[10.4%] left-[37.8%] h-28 z-10"
-						style={{
-							backgroundImage: `url(${hrShadow})`,
-							backgroundSize: "contain",
-							backgroundPosition: "center",
-							backgroundRepeat: "no-repeat",
-							opacity: khoiOpacity,
-						}}
-					></motion.div>
-
-					<motion.div
-						className="absolute w-100 bottom-[25%] left-[35.6%] h-20 z-10"
-						style={{
-							backgroundImage: `url(${hero})`,
-							backgroundSize: "contain",
-							backgroundPosition: "center",
-							backgroundRepeat: "no-repeat",
-							opacity: khoiOpacity,
-						}}
-					></motion.div>
-					{/*}
-				<div className="absolute bottom-[20%] left-[29.6%] h-30 z-10 flex gap-[0px]">
-  				{Array(4).fill(null).map((_, index) => (
-    				<div
-      					key={index}
-      					className="w-40" 
-      					style={{
-       						backgroundImage: `url(${sqr})`,
-        					backgroundSize: "contain",
-        					backgroundPosition: "center",
-        					backgroundRepeat: "no-repeat",
-      					}}
-    				/>
-  				))}
-				</div>
-
-*/}
-					<motion.div
-						className="absolute font-Treacherous text-xl bottom-[20%] left-[12%] h-30 z-10 flex gap-[0px]"
-
-						style={{ scale, y }}
+						className="font-Treacherous text-xl fixed left-0 right-0 bottom-[20%] md:bottom-[15%] h-30 z-[19] w-full md:flex md:justify-between"
+						style={{ scale, y, opacity: khoiOpacity }}
 					>
 						<CountdownTimer />
 					</motion.div>
 
-					<a href="https://docs.google.com/document/u/0/">
-						<div>
-							<motion.div
+					<a
+						href="https://docs.google.com/document/u/0/"
+						target="_blank"
+						className="absolute w-full h-full bottom-[5%] left-1/2 -translate-x-1/2 z-10"
+					>
+						<motion.div
+							className="absolute w-76 z-10 bottom-[50%] lg:bottom-[5%] left-1/2 -translate-x-1/2"
+							style={{ scale, y }}
+						>
+							<motion.img src={nut} alt="nut" />
 
-								className="absolute w-76 bottom-[6.6%] left-[38.5%] h-22 z-10"
-
-								style={{
-									backgroundImage: `url(${nut})`,
-									backgroundSize: "contain",
-									backgroundPosition: "center",
-									backgroundRepeat: "no-repeat",
-									scale,
-									y,
-								}}
-
-							></motion.div>
-
-							<motion.div
-								style={{ scale, y }}
-								className="absolute bottom-[10.6%] left-[43.2%] z-10 font-HP text-2xl text-[#ffffff] font-bold uppercase"
-							>
+							<motion.div className="absolute text-center top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 z-10 font-HP text-2xl text-[#ffffff] font-bold uppercase">
 								Thể lệ cuộc thi
 							</motion.div>
-						</div>
+						</motion.div>
 					</a>
-					
-					<motion.div
-						className="absolute w-140 bottom-[26%] left-[29.6%] h-70 z-10"
 
-						style={{
-							backgroundImage: `url(${font})`,
-							backgroundSize: "contain",
-							backgroundPosition: "center",
-							backgroundRepeat: "no-repeat",
-
-							// y: onBottom,
-
-						}}
-					></motion.div>
+					<motion.img
+						className="absolute w-lg left-1/2 -translate-x-[50%] top-[15%] lg:top-[35%] z-[50]"
+						src={font}
+						style={{ scale: scaleFont, y }}
+					/>
 				</motion.div>
 			</MouseParallaxContainer>
 		</>
-
 	);
 };
 

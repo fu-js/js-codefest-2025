@@ -143,7 +143,6 @@ function FAQItem({ item, isOpen, onToggle }) {
 				whileTap={{ scale: 0.995 }}
 			>
 				<h3 className="text-lg font-semibold text-primary pr-4 uppercase">
-
 					{item.question}
 				</h3>
 				<motion.div
@@ -173,7 +172,7 @@ function FAQItem({ item, isOpen, onToggle }) {
 								animate={{ y: 0 }}
 								exit={{ y: -10 }}
 								transition={{ duration: 0.2 }}
-								className="text-base-content text-lg leading-relaxed"
+								className="text-base-content text-lg leading-relaxed font-DenkOne"
 								dangerouslySetInnerHTML={{ __html: item.answer }}
 							></motion.p>
 						</div>
@@ -200,8 +199,14 @@ export default function FAQ() {
 	};
 
 	return (
-
-		<div className="min-w-md max-w-md md:min-w-2xl md:max-w-2xl lg:min-w-6xl lg:max-w-8xl mx-auto p-6 z-50" style={{ paddingLeft: 64, paddingRight: 64, minHeight: "calc(100% +50px)" }}>
+		<div
+			className="min-w-md max-w-md md:min-w-2xl md:max-w-2xl lg:min-w-6xl lg:max-w-8xl mx-auto p-6 z-50"
+			style={{
+				paddingLeft: 64,
+				paddingRight: 64,
+				minHeight: "calc(100% +50px)",
+			}}
+		>
 			<motion.div
 				className="space-y-4"
 				initial={{ opacity: 0 }}

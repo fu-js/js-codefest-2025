@@ -48,7 +48,7 @@ const InformationPage = () => {
 				backgroundRepeat: "no-repeat",
 				backgroundAttachment: "fixed",
 			}}
-			className="w-full min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-base-200"
+			className="w-full min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-base-200 py-18"
 		>
 			<AnimatePresence mode="wait">
 				{isViewed && (
@@ -58,29 +58,57 @@ const InformationPage = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1 }}
 							viewport={{ root: ref }}
-							className="text-4xl md:text-6xl lg:text-8xl font-bold z-10"
+							className="text-4xl md:text-6xl lg:text-8xl font-bold z-10 mb-30"
 						>
 							<TypewriterEffect words={words} />
 						</motion.div>
-						<motion.div className="relative lg:flex-row flex-col gap-y-56 md:items-center md:justify-center flex w-1/2 md:w-full md:gap-x-12 mt-44">
+						<motion.div className="relative  lg:flex-row flex-col gap-y-44 items-center justify-center flex w-1/2 md:w-full md:gap-x-12">
 							<InfoCard
 								image={hero}
 								title="Đối tượng tham gia"
 								direction="top"
-								imgClass="size-72"
-							></InfoCard>
+								imgClass="w-64 -translate-y-[65%]"
+							>
+								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary font-DenkOne">
+									<li>Sinh viên Đại học FPT Hà Nội</li>
+								</ul>
+							</InfoCard>
 							<InfoCard
 								image={bang}
 								title="Hình thức tham gia"
 								direction="bottom"
-								imgClass="w-56"
-							></InfoCard>
+								imgClass="w-48 -translate-y-[150%] lg:-translate-y-0 lg:-bottom-[25%]"
+							>
+								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary font-DenkOne">
+									<li>
+										Hình thức thi đấu: Thi đấu theo đội (3 - 4 thành viên/đội).
+									</li>
+									<li>
+										Những thí sinh đăng ký cá nhân sẽ được BTC hỗ trợ ghép đội
+										phù hợp.
+									</li>
+								</ul>
+							</InfoCard>
 							<InfoCard
 								image={cong}
 								title="Hình thức tham gia"
 								direction="top"
-								imgClass="w-36"
-							></InfoCard>
+								imgClass="w-[500px] -top-[35%]"
+							>
+								<ul class="pl-5 space-y-3 list-decimal marker:text-secondary font-DenkOne">
+									<li>
+										Đăng ký tham gia: Đăng ký theo đội 3 - 4 người hoặc đăng ký
+										cá nhân (BTC sẽ hỗ trợ ghép đội).
+									</li>
+									<li>
+										Vòng Training: Tham gia các buổi training Online và 1 buổi
+										thi thử Offline tại Đại học FPT Hà Nội.
+									</li>
+									<li>
+										Vòng Chung kết: Tổ chức Offline tại Đại học FPT Hà Nội.
+									</li>
+								</ul>
+							</InfoCard>
 						</motion.div>
 					</>
 				)}
