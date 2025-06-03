@@ -1,5 +1,4 @@
 // src/components/footer.jsx
-import bg from "../assets/images/nencover_resize.png";
 const Footer = () => {
 	return (
 		<footer className="bg-base-100 bg-cover bg-center font-DenkOne px-4 py-8 overflow-hidden border-t-2 border-primary text-white stroke-1 stroke-primary z-[1000]">

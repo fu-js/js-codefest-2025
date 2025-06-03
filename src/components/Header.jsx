@@ -1,7 +1,6 @@
-import { cn } from "../lib/utils"; // Assuming you have a utility function for classnames
+import { cn } from "../lib/utils";
 import font from "../assets/images/font.png";
-// import { motion, useScroll } from "motion/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useScroll from "./hooks/use-scroll";
 const navItems1 = [
 	{ to: "#homepage", label: "Trang chủ" },

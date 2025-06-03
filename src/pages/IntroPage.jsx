@@ -1,17 +1,5 @@
-import bg from "../assets/images/nencover_resize.png";
-import map from "../assets/images/bang4.webp";
-import hero from "../assets/images/hero2.webp";
-import dragon from "../assets/images/dragon.webp";
-import anaconda from "../assets/images/anacon.png";
-import { TypingAnimation } from "../components/ui/TypingAnimation";
 import { useRef } from "react";
-import {
-	motion,
-	useScroll,
-	useTransform,
-	useInView,
-	AnimatePresence,
-} from "motion/react";
+import { motion, useInView } from "motion/react";
 import { TypewriterEffect } from "../components/ui/TextGenerate";
 
 const words = [
@@ -27,10 +15,6 @@ const words = [
 		text: "TRỢ",
 		className: "font-HP text-[#FFFFFF]",
 	},
-	// {
-	// 	text: "VÀNG",
-	// 	className: "font-HP text-[#FFD700]",
-	// },
 ];
 const words2 = [
 	{
@@ -53,7 +37,6 @@ const words2 = [
 
 const IntroPage = () => {
 	const ref = useRef(null);
-	const { scrollY } = useScroll({ target: ref });
 	const isViewed = useInView(ref, { once: true });
 	return (
 		<>
@@ -64,22 +47,9 @@ const IntroPage = () => {
 				transition={{ duration: 1, ease: "easeInOut" }}
 				ref={ref}
 				className="relative flex flex-col justify-center items-center w-full min-h-screen bg-base-300"
-				style={
-					{
-						// backgroundImage: `url(${bg})`,
-						// backgroundSize: "cover",
-						// backgroundPosition: "center",
-						// backgroundRepeat: "no-repeat",
-						// backgroundAttachment: "fixed",
-					}
-				}
 			>
 				<motion.div className="w-full h-full overflow-hidden">
-					<motion.div
-					// initial={{ x: -1000 }}
-					// whileInView={{ x: 0 }}
-					// transition={{ duration: 1, type: "spring" }}
-					>
+					<motion.div>
 						{isViewed && (
 							<>
 								<motion.div className="min-h-[70vh] text-4xl md:text-6xl lg:text-8xl font-bold z-10">
@@ -104,14 +74,3 @@ const IntroPage = () => {
 };
 
 export default IntroPage;
-
-const temp = `					{/* <motion.img src={map} alt="map" className="min-w-md" />
-
-	<motion.div className="absolute max-w-[400px] lg:max-w-3/4 top-[40%] bottom-[25%] font-DenkOne text-sm md:text-2xl font-medium leading-[1.75rem]">
-		CODEFEST là một sự kiện học thuật được tổ chức bởi JS Club với mong
-		muốn lan tỏa niềm đam mê lập trình tới tất cả sinh viên trường đại
-		học FPT. Tham gia cuộc thi, các đội sẽ sử dụng ngôn ngữ Java tạo ra
-		những con bot để tranh tài với nhau. Đây là cơ hội cho các đội thi
-		được tham gia trải nghiệm sân chơi vừa vui vẻ vừa ly kỳ, hứa hẹn sẽ
-		đem lại nhiều niềm vui bên cạnh những giá trị học thuật bổ ích.
-	</motion.div> */}`;

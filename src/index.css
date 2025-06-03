@@ -51,3 +51,9 @@
 .icon-fill {
 	fill: #92acfa !important;
 }
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+}

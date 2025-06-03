@@ -1,18 +1,11 @@
 // InformationPage.jsx
-import bg from "../assets/images/nencover_resize.png";
 
 import hero from "../assets/images/hero3.webp";
 import bang from "../assets/images/bang2.webp";
 import cong from "../assets/images/cong_coden.webp";
-import {
-	AnimatePresence,
-	motion,
-	useScroll,
-	useTransform,
-	useInView,
-} from "motion/react";
+import { AnimatePresence, motion, useInView } from "motion/react";
 import { TypewriterEffect } from "../components/ui/TextGenerate";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import InfoCard from "../components/ui/InfoCard";
 
 const parentVariants = {

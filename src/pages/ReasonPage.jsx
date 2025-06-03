@@ -1,11 +1,5 @@
 // ReasonPage.jsx
-import {
-	AnimatePresence,
-	motion,
-	useScroll,
-	useTransform,
-	useInView,
-} from "motion/react";
+import { AnimatePresence, motion, useInView } from "motion/react";
 import hero from "../assets/images/hero3.webp";
 
 import {
@@ -15,7 +9,7 @@ import {
 } from "../components/ui/Terminal";
 
 import { TypewriterEffect } from "../components/ui/TextGenerate";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const words = [
 	{
@@ -71,29 +65,17 @@ const ReasonPage = () => {
 				ref={ref}
 				id="reason"
 				className="relative flex flex-col items-center justify-center min-h-screen scroll-smooth overflow-hidden bg-base-300 pt-44 md:pt-0"
-				style={
-					{
-						// backgroundImage: `url(${bg})`,
-						// backgroundSize: "cover",
-						// backgroundPosition: "center",
-						// backgroundRepeat: "no-repeat",
-						// backgroundAttachment: "fixed",
-						// scale,
-						// y,
-					}
-				}
 			>
 				<motion.div className="w-full relative flex flex-col items-center justify-center">
 					<motion.div
 						initial={{ opacity: 0, x: -100, scale: 0.8 }}
 						whileInView={{ opacity: 1, x: 0, scale: 1.5 }}
 						transition={{ duration: 0.3, ease: "easeInOut" }}
-						className="absolute right-0 md:left-1/2 transform md:translate-x-1/2 bottom-0 size-64 object-cover z-10"
+						className="absolute right-0 md:left-[45%] transform md:translate-x-1/2 bottom-0 size-64 md:size-80 object-cover z-10"
 						style={{
 							backgroundImage: `url(${hero})`,
 							backgroundSize: "cover",
 							backgroundPosition: "center",
-							// y,
 						}}
 					/>
 					<AnimatePresence mode="wait">

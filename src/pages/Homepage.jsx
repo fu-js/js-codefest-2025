@@ -3,17 +3,14 @@ import bgImg from "../assets/images/nencover_resize.png";
 import bgImg2 from "../assets/images/poster.webp";
 import hero from "../assets/images/hero_back.webp";
 import hrShadow from "../assets/images/hero_shadow.webp";
-import sqr from "../assets/images/square.webp";
 import land from "../assets/images/duong.webp";
 import cong from "../assets/images/cong_coden.png";
-import khoi from "../assets/images/khoi.webp";
 import drG from "../assets/images/dragon.webp";
 import stone from "../assets/images/da4.webp";
 import tree1 from "../assets/images/tree22.webp";
 import tree2 from "../assets/images/download.webp";
 import tran from "../assets/images/anacon.png";
 import da from "../assets/images/da2_bg.webp";
-import light from "../assets/images/cloud_light.webp";
 import font from "../assets/images/font.png";
 import nut from "../assets/images/khung.png";
 import light2 from "../assets/images/cloud_light.png";
@@ -22,10 +19,9 @@ import {
 	MouseParallaxContainer,
 	MouseParallaxChild,
 } from "react-parallax-mouse";
-import React, { useState, useEffect } from "react";
 import CountdownTimer from "../components/countdown/CountdownTimer";
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useInView } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 
 const Homepage = () => {
 	const ref = useRef(null);
@@ -38,15 +34,12 @@ const Homepage = () => {
 	const scale = useTransform(scrollY, [0, 500, 1000], [1, 0.8, 0.5]);
 	const scaleFont = useTransform(scrollY, [0, 500, 1000], [1, 1.2, 1.6]);
 	const scaleCong = useTransform(scrollY, [0, 500, 1000], [1, 2, 2.5]);
-	const turnL = useTransform(scrollY, [0, 500], [0, -5000]);
-	const turnR = useTransform(scrollY, [0, 500], [0, 5000]);
 	const y = useTransform(scrollY, [0, 500, 1000], [0, -100, -50]);
 	const opacity = useTransform(scrollY, [0, 500], [1, 0.7]);
-	const khoiOpacity = useTransform(scrollY, [0, 500], [1, 0]);
-	const onTop = useTransform(scrollY, [0, 500], [0, -1000]);
-	const onBottom = useTransform(scrollY, [0, 500], [0, 1000]);
+	const hidden = useTransform(scrollY, [0, 500], [1, 0]);
+
 	return (
-		<>
+		<div id="homepage">
 			<div className="fixed top-0 left-0 w-full h-screen z-[-1] bg-[#1D2C48]"></div>
 			<MouseParallaxContainer
 				globalFactorX={0.1}
@@ -100,7 +93,7 @@ const Homepage = () => {
 							src={tree2}
 							alt="tree"
 							style={{
-								opacity: khoiOpacity,
+								opacity: hidden,
 							}}
 						/>
 					</MouseParallaxChild>
@@ -115,7 +108,7 @@ const Homepage = () => {
 							alt="dragon"
 							className="opacity-70 absolute"
 							style={{
-								opacity: khoiOpacity,
+								opacity: hidden,
 							}}
 						/>
 					</MouseParallaxChild>
@@ -129,7 +122,7 @@ const Homepage = () => {
 							src={tree1}
 							alt="tree"
 							style={{
-								opacity: khoiOpacity,
+								opacity: hidden,
 							}}
 						/>
 					</MouseParallaxChild>
@@ -144,7 +137,7 @@ const Homepage = () => {
 							alt="tran"
 							className="absolute inset-0"
 							style={{
-								opacity: khoiOpacity,
+								opacity: hidden,
 							}}
 						/>
 					</MouseParallaxChild>
@@ -154,7 +147,7 @@ const Homepage = () => {
 						factorY={0.3}
 						className="absolute right-[-5%] top-[65%] w-xl h-xl z-[15] hidden lg:block"
 					>
-						<motion.img src={da} alt="da" style={{ opacity: khoiOpacity }} />
+						<motion.img src={da} alt="da" style={{ opacity: hidden }} />
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
@@ -166,7 +159,7 @@ const Homepage = () => {
 							src={tree1}
 							alt="tree"
 							style={{
-								opacity: khoiOpacity,
+								opacity: hidden,
 								y,
 							}}
 						/>
@@ -185,9 +178,6 @@ const Homepage = () => {
 						/>
 					</MouseParallaxChild>
 
-					{/* <MouseParallaxChild
-						factorX={0.1}
-						factorY={0.3} */}
 					<div className="absolute left-0 right-0 bottom-0 z-10 hidden lg:block">
 						<motion.img
 							src={land}
@@ -211,22 +201,21 @@ const Homepage = () => {
 							alt="hero"
 							className="absolute w-32 left-1/2 bottom-[40%] translate-x-[-50%] z-[11]"
 							style={{
-								opacity: khoiOpacity,
+								opacity: hidden,
 								y,
 							}}
 						/>
 						<motion.img
-							style={{ y, opacity: khoiOpacity }}
+							style={{ y, opacity: hidden }}
 							src={hrShadow}
 							alt="hrShadow"
 							className="absolute w-32 left-[50%] translate-x-[-60%] md:bottom-[20%] z-10"
 						/>
 					</div>
-					{/* </MouseParallaxChild> */}
 
 					<motion.div
-						className="font-Treacherous text-xl fixed left-0 right-0 bottom-[20%] md:bottom-[15%] h-30 z-[19] w-full md:flex md:justify-between"
-						style={{ scale, y, opacity: khoiOpacity }}
+						className="font-HP text-xl fixed left-0 right-0 bottom-[20%] md:bottom-[15%] h-30 z-[19] w-full md:flex md:justify-between"
+						style={{ scale, y, opacity: hidden }}
 					>
 						<CountdownTimer />
 					</motion.div>
@@ -251,7 +240,7 @@ const Homepage = () => {
 					/>
 				</motion.div>
 			</MouseParallaxContainer>
-		</>
+		</div>
 	);
 };
 
