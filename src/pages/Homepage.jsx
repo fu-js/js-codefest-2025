@@ -108,7 +108,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.2}
 						factorY={0.4}
-						className="absolute top-[10%] left-[-5%] md:left-0 w-3xl h-xl z-10 hidden lg:block"
+						className="absolute top-[10%] left-[-5%] md:left-0 w-2xl h-xl z-10 hidden lg:block"
 					>
 						<motion.img
 							src={drG}
@@ -137,7 +137,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.2}
 						factorY={0.4}
-						className="absolute right-0 lg:right-[15%] w-3xl h-xl z-10 hidden lg:block"
+						className="absolute right-0 lg:right-[15%] -translate-y-12 w-2xl h-xl z-10 hidden lg:block"
 					>
 						<motion.img
 							src={tran}
@@ -198,7 +198,7 @@ const Homepage = () => {
 
 						<a href="/intro">
 							<motion.img
-								className="absolute w-68 left-1/2 translate-x-[-50%] md:bottom-[50%] h-72 z-10 cursor-pointer"
+								className="absolute w-80 left-1/2 translate-x-[-60%] md:bottom-[50%] h-auto z-10 cursor-pointer"
 								src={cong}
 								style={{
 									scale: scaleCong,
@@ -245,7 +245,7 @@ const Homepage = () => {
 					</motion.a>
 
 					<motion.img
-						className="absolute w-lg left-1/2 -translate-x-[50%] top-[15%] lg:top-[35%] z-[50]"
+						className="absolute w-lg left-1/2 translate-x-[-50%] lg:-translate-x-[58%] top-[15%] lg:top-[35%] z-[50]"
 						src={font}
 						style={{ scale: scaleFont, y }}
 					/>

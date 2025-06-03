@@ -27,10 +27,10 @@ const words = [
 		text: "TRỢ",
 		className: "font-HP text-[#FFFFFF]",
 	},
-	{
-		text: "VÀNG",
-		className: "font-HP text-[#FFD700]",
-	},
+	// {
+	// 	text: "VÀNG",
+	// 	className: "font-HP text-[#FFD700]",
+	// },
 ];
 const words2 = [
 	{
@@ -76,17 +76,15 @@ const IntroPage = () => {
 			>
 				<motion.div className="w-full h-full overflow-hidden">
 					<motion.div
-						initial={{ x: -1000 }}
-						whileInView={{ x: 0 }}
-						transition={{ duration: 1, type: "spring" }}
+					// initial={{ x: -1000 }}
+					// whileInView={{ x: 0 }}
+					// transition={{ duration: 1, type: "spring" }}
 					>
-						<motion.div className="min-h-[70vh]">
-							<p className="font-HP text-7xl uppercase w-full flex flex-col items-center justify-center">
-								Nhà tài trợ
-							</p>
-						</motion.div>
 						{isViewed && (
 							<>
+								<motion.div className="min-h-[70vh] text-4xl md:text-6xl lg:text-8xl font-bold z-10">
+									<TypewriterEffect words={words} />
+								</motion.div>
 								<motion.div
 									intial={{ opacity: 0, x: -100 }}
 									whileInView={{ opacity: 1, x: 0 }}
@@ -96,61 +94,6 @@ const IntroPage = () => {
 								>
 									<TypewriterEffect words={words2} />
 								</motion.div>
-								{/* <div className="w-full">
-									<div className="max-w-5xl mx-auto">
-										<div className="chat chat-start">
-											<div className="chat-image avatar">
-												<div className="w-36 rounded-full">
-													<img src={hero} />
-												</div>
-											</div>
-											<div className="chat-header text-secondary text-lg">
-												Player
-											</div>
-											<div className="chat-bubble max-w-xl max-w-xl font-DenkOne">
-												<TypingAnimation duration={25}>
-													CODEFEST là một sự kiện học thuật được tổ chức bởi JS
-													Club với mong muốn lan tỏa niềm đam mê lập trình tới
-													tất cả sinh viên trường đại học FPT.
-												</TypingAnimation>
-											</div>
-										</div>
-										<div className="chat chat-end">
-											<div className="chat-image avatar">
-												<div className="w-36 rounded-full">
-													<img src={dragon} />
-												</div>
-											</div>
-											<div className="chat-header text-secondary text-lg">
-												Boss 1
-											</div>
-											<div className="chat-bubble max-w-xl font-DenkOne">
-												<TypingAnimation duration={25} delay={500}>
-													Đây là cơ hội cho các đội thi được tham gia trải
-													nghiệm sân chơi vừa vui vẻ vừa ly kỳ, hứa hẹn sẽ đem
-													lại nhiều niềm vui bên cạnh những giá trị học thuật bổ
-													ích.
-												</TypingAnimation>
-											</div>
-										</div>
-										<div className="chat chat-start">
-											<div className="chat-image avatar">
-												<div className="w-36 rounded-full">
-													<img src={anaconda} />
-												</div>
-											</div>
-											<div className="chat-header text-secondary text-lg">
-												Boss 2
-											</div>
-											<div className="chat-bubble max-w-xl font-DenkOne">
-												<TypingAnimation duration={25} delay={1000}>
-													Tham gia cuộc thi, các đội sẽ sử dụng ngôn ngữ Java
-													tạo ra những con bot để tranh tài với nhau.
-												</TypingAnimation>
-											</div>
-										</div>
-									</div>
-								</div> */}
 							</>
 						)}
 					</motion.div>

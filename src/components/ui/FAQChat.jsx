@@ -113,12 +113,12 @@ export function MessengerFAQ() {
 	};
 
 	return (
-		<div className="flex h-[80vh] w-md md:w-3xl lg:w-4xl bg-base-100 shadow-2xl rounded-2xl overflow-hidden border border-primary">
+		<div className="flex h-[80vh] w-md md:w-3xl lg:w-5xl bg-base-100 shadow-2xl rounded-2xl overflow-hidden border border-primary">
 			{/* Sidebar */}
 			<div
 				className={`${
 					isMobileView ? (showChatList ? "w-full" : "hidden") : "w-80"
-				} border-r border-primary flex flex-col md:w-80`}
+				} border-r border-primary flex flex-col md:w-80 lg:w-96`}
 			>
 				{/* Sidebar Header */}
 				<div className="p-3 md:p-4 border-b border-primary">

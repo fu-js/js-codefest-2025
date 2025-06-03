@@ -15,6 +15,32 @@ import { TypewriterEffect } from "../components/ui/TextGenerate";
 import { useEffect, useRef } from "react";
 import InfoCard from "../components/ui/InfoCard";
 
+const parentVariants = {
+	hidden: {
+		opacity: 0,
+	},
+	visible: {
+		opacity: 1,
+		transition: {
+			delayChildren: 0.5,
+			staggerChildren: 0.5,
+			staggerDirection: -1,
+			type: "spring",
+		},
+	},
+};
+
+const childVariants = {
+	hidden: {
+		opacity: 0,
+		y: 20,
+	},
+	visible: {
+		opacity: 1,
+		y: 0,
+	},
+};
+
 const words = [
 	{
 		text: "THÔNG",
@@ -36,20 +62,11 @@ const words = [
 
 const InformationPage = () => {
 	const ref = useRef(null);
-	const isViewed = useInView(ref, { once: true });
+	const isViewed = useInView(ref);
 	return (
 		<div
 			id="information"
 			ref={ref}
-			style={
-				{
-					// backgroundImage: `url(${bg})`,
-					// backgroundSize: "cover",
-					// backgroundPosition: "center",
-					// backgroundRepeat: "no-repeat",
-					// backgroundAttachment: "fixed",
-				}
-			}
 			className="w-full min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-base-300 py-18"
 		>
 			<AnimatePresence mode="wait">
@@ -64,65 +81,62 @@ const InformationPage = () => {
 						>
 							<TypewriterEffect words={words} />
 						</motion.div>
-						<motion.div className="relative lg:flex-row flex-col gap-y-44 items-center justify-center flex w-1/2 md:w-full md:gap-x-12">
-							<InfoCard
-								image={hero}
-								title="Đối tượng <br /> tham gia"
-								tClass="text-4xl mt-12"
-								pClass="text-xl"
-								direction="top"
-								imgClass="w-56 -translate-y-[65%]"
-							>
-								<ul class="space-y-3 font-DenkOne mt-6">
-									<li className="text-center">Sinh viên toàn miền Bắc</li>
-								</ul>
-							</InfoCard>
-							<InfoCard
-								image={bang}
-								title="Hình thức <br /> tham gia"
-								tClass="text-4xl mt-12"
-								pClass="text-xl mt-6"
-								direction="bottom"
-								imgClass="w-48 -translate-y-[150%] lg:-translate-y-8 lg:-bottom-[25%]"
-							>
-								<ul class="space-y-3 font-DenkOne mb-6">
-									<li className="text-center">
-										Thi đấu theo đội <br /> (4 - 5 thành viên/đội)
-									</li>
-								</ul>
-							</InfoCard>
-							<InfoCard
-								image={cong}
-								title="Hình thức <br /> tổ chức"
-								tClass="text-4xl "
-								pClass="text-xl"
-								direction="top"
-								imgClass="w-[500px] -top-[35%]"
-							>
-								<ul class="space-y-3 font-DenkOne">
-									<li className="text-center">
-										<span className="font-bold text-secondary">
-											Đăng ký tham gia:
-										</span>
-										<br />
-										Đăng ký theo đội 4 - 5 người
-									</li>
-									<li className="ml-8">
-										<ul className="list-disc marker:text-secondary">
-											<li>Tham gia các buổi training Online</li>
+						<motion.div
+							variants={parentVariants}
+							initial="hidden"
+							whileInView="visible"
+							className="relative lg:flex-row flex-col gap-y-44 items-center justify-center flex w-1/2 md:w-full md:gap-x-12"
+						>
+							<motion.div variants={childVariants}>
+								<InfoCard
+									image={hero}
+									title="Đối tượng <br /> tham gia"
+									imgClass="w-56 -top-1/2"
+								>
+									<ul class="space-y-3 font-DenkOne mt-6">
+										<li className="text-center">Sinh viên toàn miền Bắc</li>
+									</ul>
+								</InfoCard>
+							</motion.div>
+							<motion.div variants={childVariants}>
+								<InfoCard
+									image={bang}
+									title="Hình thức <br /> tham gia"
+									imgClass="w-48 -top-[15%]"
+								>
+									<ul className="space-y-3 font-DenkOne mt-6">
+										<li className="text-center">
+											Thi đấu theo đội <br /> (4 - 5 thành viên/đội)
+										</li>
+									</ul>
+								</InfoCard>
+							</motion.div>
+							<motion.div variants={childVariants}>
+								<InfoCard
+									image={cong}
+									title="Hình thức <br /> tổ chức"
+									imgClass="w-[500px] -top-[25%]"
+								>
+									<ul className="space-y-3 font-DenkOne mt-6">
+										<li className="text-center">
+											<span className="font-bold text-secondary">
+												Đăng ký tham gia:
+											</span>
+											<br />
+											Đăng ký theo đội từ
+											<br />4 - 5 người
+										</li>
 
-											<li>1 buổi thi thử Online</li>
-										</ul>
-									</li>
-									<li className="text-center">
-										<span className="font-bold text-secondary">
-											Vòng Chung kết:
-										</span>
-										<br />
-										Tổ chức Offline tại Đại học FPT Hà Nội.
-									</li>
-								</ul>
-							</InfoCard>
+										<li className="text-center">
+											<span className="font-bold text-secondary">
+												Vòng Chung kết:
+											</span>
+											<br />
+											Tổ chức Offline tại ĐH <br /> FPT Hà Nội.
+										</li>
+									</ul>
+								</InfoCard>
+							</motion.div>
 						</motion.div>
 					</>
 				)}
