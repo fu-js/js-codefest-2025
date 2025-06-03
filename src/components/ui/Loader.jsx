@@ -32,7 +32,7 @@ const Loader = ({ progress }) => {
 					transition={{ duration: 0.8, type: "tween", ease: "easeInOut" }}
 					alt="Congden"
 					className="
-             w-72 md:h-96 mb-4"
+             h-64 md:h-72 lg:h-96 mb-4"
 				/>
 			</AnimatePresence>
 			<img

@@ -3,13 +3,7 @@ import Footer from "./components/Footer";
 import Loader from "./components/ui/Loader";
 import { useEffect, useRef, useState } from "react";
 import { ReactLenis } from "lenis/dist/lenis-react";
-import {
-	motion,
-	useMotionTemplate,
-	useScroll,
-	useTransform,
-} from "framer-motion";
-import khoi from "./assets/images/khoi.webp";
+import { useScroll, useTransform } from "framer-motion";
 
 import Homepage from "./pages/Homepage";
 import IntroPage from "./pages/IntroPage";
@@ -30,20 +24,6 @@ const App = () => {
 		pos >= 1 ? "relative" : "fixed"
 	);
 
-	useEffect(() => {
-		const updateMousePosition = (ev) => {
-			if (!targetRef.current) return;
-			const { clientX, clientY } = ev;
-			targetRef.current.style.setProperty("--x", `${clientX}px`);
-			targetRef.current.style.setProperty("--y", `${clientY}px`);
-		};
-
-		window.addEventListener("mousemove", updateMousePosition);
-
-		return () => {
-			window.removeEventListener("mousemove", updateMousePosition);
-		};
-	}, []);
 	const [loading, setLoading] = useState(true);
 	const [progress, setProgress] = useState(0);
 	useEffect(() => {
@@ -71,13 +51,7 @@ const App = () => {
 						ref={targetRef}
 						style={{ opacity }}
 						className="relative h-screen"
-						// className="relative h-screen before:pointer-events-none before:fixed before:inset-0 before:z-0 before:bg-[radial-gradient(circle_farthest-side_at_var(--x,_100px)_var(--y,_100px),_var(--color-primary)_0%,_transparent_100%)] before:opacity-40"
 					>
-						<img
-							className="fixed bottom-0 left-0 right-0 opacity-10 z-[1]"
-							src={khoi}
-							alt=""
-						/>
 						<Homepage />
 						<IntroPage />
 						<InformationPage />
