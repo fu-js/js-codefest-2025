@@ -1,14 +1,9 @@
 // QuestionPage.jsx
 import { motion, useInView, AnimatePresence } from "motion/react";
 import { MessengerFAQ } from "../components/ui/FAQChat.jsx";
-//import bg from "../assets/images/reasons/bg/2.png";
-import bg from "../assets/images/nencover_resize.png";
-import hero from "../assets/images/hero2.webp";
-import dragon from "../assets/images/dragon.webp";
-import anaconda from "../assets/images/anacon.png";
 
 import { TypewriterEffect } from "../components/ui/TextGenerate";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 const words = [
 	{
@@ -35,15 +30,6 @@ const QuestionPage = () => {
 		<motion.div
 			id="question"
 			ref={ref}
-			style={
-				{
-					// backgroundImage: `url(${bg})`,
-					// backgroundSize: "cover",
-					// backgroundPosition: "center",
-					// backgroundRepeat: "no-repeat",
-					// backgroundAttachment: "fixed",
-				}
-			}
 			className="min-h-screen w-full relative flex flex-col items-center justify-center bg-base-300 py-36"
 		>
 			<AnimatePresence mode="wait">

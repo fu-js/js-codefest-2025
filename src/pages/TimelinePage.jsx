@@ -1,6 +1,5 @@
 // TimelinePage.jsx
 import { motion, useInView, AnimatePresence } from "motion/react";
-import bg from "../assets/images/nencover_resize.png";
 import dragon from "../assets/images/dragon.webp";
 import { TypewriterEffect } from "../components/ui/TextGenerate";
 import { useRef } from "react";
@@ -31,15 +30,6 @@ const TimelinePage = () => {
 		<motion.div
 			id="timeline"
 			ref={ref}
-			style={
-				{
-					// backgroundImage: `url(${bg})`,
-					// backgroundSize: "cover",
-					// backgroundPosition: "center",
-					// backgroundRepeat: "no-repeat",
-					// backgroundAttachment: "fixed",
-				}
-			}
 			className="w-full bg-base-300 relative flex flex-col items-center justify-center min-h-screen py-18"
 		>
 			<MouseParallaxContainer

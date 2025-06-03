@@ -23,7 +23,7 @@ export default function TimelineBar() {
 						style={{ lineHeight: 2 }}
 					>
 						<div
-							className="text-4xl font-black text-warning font-Treacherous mb-2"
+							className="text-4xl text-warning font-HP mb-2 uppercase"
 							style={{ lineHeight: 1.5 }}
 						>
 							Mở đơn đăng ký
@@ -62,11 +62,11 @@ export default function TimelineBar() {
 						</svg>
 					</div>
 					<div
-						className="timeline-end md:mb-10 text-xl"
+						className="timeline-end md:mb-10 ml-6 text-xl"
 						style={{ lineHeight: 2 }}
 					>
 						<div
-							className="text-4xl font-black text-warning font-Treacherous mb-2"
+							className="text-4xl text-warning font-HP mb-2 uppercase"
 							style={{ lineHeight: 1.5 }}
 						>
 							Giai đoạn Training
@@ -110,7 +110,7 @@ export default function TimelineBar() {
 					</div>
 					<div className="timeline-end ml-6 text-xl" style={{ lineHeight: 2 }}>
 						<div
-							className="text-4xl font-black text-warning font-Treacherous mb-2"
+							className="text-4xl text-warning font-HP mb-2 uppercase"
 							style={{ lineHeight: 1.5 }}
 						>
 							Vòng Chung kết
