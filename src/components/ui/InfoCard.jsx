@@ -15,7 +15,7 @@ const InfoCard = ({ image, title, children, imgClass }) => {
 			<div className="flex flex-col items-center justify-center h-[400px]">
 				<h1
 					className={cn(
-						"w-full text-center text-4xl font-Treacherous tracking-wider font-bold text-[#92ACFA] uppercase max-w-[286px]"
+						"w-full text-center text-4xl font-HP tracking-wider font-bold text-[#92ACFA] uppercase max-w-[286px]"
 					)}
 					dangerouslySetInnerHTML={{ __html: title }}
 				></h1>

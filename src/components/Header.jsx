@@ -1,5 +1,6 @@
 import { cn } from "../lib/utils";
 import font from "../assets/images/font.png";
+import fontNoGlow from "../assets/images/font_noglow.png";
 import { useState } from "react";
 import useScroll from "./hooks/use-scroll";
 const navItems1 = [
@@ -43,7 +44,7 @@ const Header = () => {
 							</a>
 						))}
 
-						<Logo className={"md:col-span-1"} />
+						<Logo className={"md:col-span-1"} glow={false} />
 						{navItems2.map((item, index) => (
 							<a
 								key={index}
@@ -57,7 +58,7 @@ const Header = () => {
 				</div>
 				{/* Mobile header  */}
 				<div className="md:hidden container mx-auto flex justify-between items-center font-HP tracking-wider">
-					<Logo />
+					<Logo glow={false} />
 					<button className="btn btn-ghost" onClick={handleOpen}>
 						{isOpen ? <CloseIcon /> : <MenuIcon />}
 					</button>
@@ -97,14 +98,18 @@ const Header = () => {
 
 export default Header;
 
-const Logo = ({ className }) => {
+const Logo = ({ className, glow = true }) => {
 	return (
 		<div
 			className={`flex items-center justify-center ${
 				className ? className : ""
 			}`}
 		>
-			<img src={font} alt="logo" className="w-36 md:w-[256px]" />
+			<img
+				src={glow ? font : fontNoGlow}
+				alt="logo"
+				className="w-36 md:w-[256px]"
+			/>
 		</div>
 	);
 };

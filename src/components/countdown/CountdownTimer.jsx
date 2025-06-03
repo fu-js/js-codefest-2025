@@ -9,7 +9,7 @@ const TimeBlock = ({ children, label }) => (
 		<p className="text-white text-stroke font-HP font-extrabold text-4xl lg:text-5xl drop-shadow-[4px_4px_#1D2C48]">
 			{children}
 		</p>
-		<p className="text-[#92ACFA] text-stroke font-Treas text-md lg:text-l uppercase">
+		<p className="text-[#92ACFA] text-stroke font-Neusa text-md lg:text-l uppercase">
 			{label}
 		</p>
 	</div>

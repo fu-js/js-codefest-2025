@@ -17,7 +17,7 @@ const parentVariants = {
 		transition: {
 			delayChildren: 0.5,
 			staggerChildren: 0.5,
-			staggerDirection: -1,
+			staggerDirection: 1,
 			type: "spring",
 		},
 	},

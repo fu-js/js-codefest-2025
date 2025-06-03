@@ -9,32 +9,20 @@
 	font-weight: 400;
 	font-style: normal;
 }
-
-@font-face {
-	font-family: "Teddy Bear";
-	src: url("./assets/fonts/CCHELLSHOCKTEDDYBEAR.TTF") format("truetype");
-}
-
-@font-face {
-	font-family: "Treacherous Curves";
-	src: url("./assets/fonts/CCTREACHEROUSCURVES.TTF") format("truetype");
-}
-
-@font-face {
-	font-family: "EasyCome";
-	src: url("./assets/fonts/EasyCome.ttf") format("truetype");
-}
 @font-face {
 	font-family: "DenkOne";
 	src: url("./assets/fonts/DenkOne.ttf") format("truetype");
 }
 
+@font-face {
+	font-family: "Neusa";
+	src: url("./assets/fonts/NEUSA.ttf") format("truetype");
+}
+
 @theme {
 	--font-HP: "Harry Potter", sans-serif;
-	--font-Teddy: "Teddy Bear", sans-serif;
-	--font-Treacherous: "Treacherous Curves", sans-serif;
-	--font-EasyCome: "EasyCome", sans-serif;
 	--font-DenkOne: "DenkOne", sans-serif;
+	--font-Neusa: "Neusa", sans-serif;
 }
 
 @theme inline {
