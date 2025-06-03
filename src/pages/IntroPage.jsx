@@ -54,7 +54,7 @@ const words2 = [
 const IntroPage = () => {
 	const ref = useRef(null);
 	const { scrollY } = useScroll({ target: ref });
-	const isViewed = useInView(ref);
+	const isViewed = useInView(ref, { once: true });
 	return (
 		<>
 			<motion.div

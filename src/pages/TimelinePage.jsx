@@ -12,11 +12,7 @@ import {
 
 const words = [
 	{
-		text: "TIME",
-		className: "font-HP tracking-wider text-secondary",
-	},
-	{
-		text: "LINE",
+		text: "TIMELINE",
 		className: "font-HP tracking-wider text-primary",
 	},
 	{
@@ -30,7 +26,7 @@ const words = [
 ];
 const TimelinePage = () => {
 	const ref = useRef(null);
-	const isViewed = useInView(ref);
+	const isViewed = useInView(ref, { once: true });
 	return (
 		<motion.div
 			id="timeline"

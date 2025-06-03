@@ -1,17 +1,14 @@
 // QuestionPage.jsx
 import { motion, useInView, AnimatePresence } from "motion/react";
-
+import { MessengerFAQ } from "../components/ui/FAQChat.jsx";
 //import bg from "../assets/images/reasons/bg/2.png";
 import bg from "../assets/images/nencover_resize.png";
 import hero from "../assets/images/hero2.webp";
 import dragon from "../assets/images/dragon.webp";
 import anaconda from "../assets/images/anacon.png";
-import { TypingAnimation } from "../components/ui/TypingAnimation";
 
 import { TypewriterEffect } from "../components/ui/TextGenerate";
 import { useRef, useState } from "react";
-import FAQ from "../components/ui/Accordion";
-import { FAQChat } from "../components/ui/FAQChat.jsx";
 
 const words = [
 	{
@@ -20,7 +17,7 @@ const words = [
 	},
 	{
 		text: "HỎI",
-		className: "font-HP tracking-wider text-secondary",
+		className: "font-HP tracking-wider text-primary",
 	},
 	{
 		text: "THƯỜNG",
@@ -33,7 +30,7 @@ const words = [
 ];
 const QuestionPage = () => {
 	const ref = useRef(null);
-	const isViewed = useInView(ref);
+	const isViewed = useInView(ref, { once: true });
 	return (
 		<motion.div
 			id="question"
@@ -53,7 +50,7 @@ const QuestionPage = () => {
 				{isViewed && (
 					<>
 						<motion.div className="hero">
-							<div className="hero-content flex-col lg:flex-row-reverse">
+							<div className="hero-content flex-col gap-12">
 								<div className="text-center overflow-hidden">
 									<motion.div
 										intial={{ opacity: 0, x: -100 }}
@@ -64,11 +61,8 @@ const QuestionPage = () => {
 									>
 										<TypewriterEffect words={words} />
 									</motion.div>
-									<p className="py-6 font-DenkOne">
-										Giải đáp hết mọi câu hỏi về CODEFEST 2025
-									</p>
 								</div>
-								<FAQChat />
+								<MessengerFAQ />
 							</div>
 						</motion.div>
 					</>

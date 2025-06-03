@@ -82,16 +82,12 @@ const Homepage = () => {
 						}}
 					></div>
 
-					<motion.img
-						className="absolute bottom-[-4%] w-full h-full z-10 hidden lg:block"
+					<img
+						className="absolute inset-0 scale-150 w-full h-full z-10 hidden lg:block"
 						style={{
 							backgroundImage: `url(${light2})`,
 							backgroundSize: "contain",
 							backgroundPosition: "center",
-							transform: "scaleX(-1)",
-							opacity: khoiOpacity,
-							// translateY: onTop,
-							// x: turnL,
 						}}
 					/>
 
@@ -100,7 +96,13 @@ const Homepage = () => {
 						factorY={0.3}
 						className="absolute top-[-15%] left-[-15%] w-180 h-200 z-10 hidden lg:block"
 					>
-						<motion.img src={tree2} alt="tree" style={{ x: turnR }} />
+						<motion.img
+							src={tree2}
+							alt="tree"
+							style={{
+								opacity: khoiOpacity,
+							}}
+						/>
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
@@ -112,7 +114,9 @@ const Homepage = () => {
 							src={drG}
 							alt="dragon"
 							className="opacity-70 absolute"
-							style={{ x: turnR }}
+							style={{
+								opacity: khoiOpacity,
+							}}
 						/>
 					</MouseParallaxChild>
 
@@ -121,7 +125,13 @@ const Homepage = () => {
 						factorY={0.3}
 						className="absolute top-[0%] right-[-20%] w-180 h-200 z-10 hidden lg:block"
 					>
-						<motion.img src={tree1} alt="tree" style={{ x: turnL }} />
+						<motion.img
+							src={tree1}
+							alt="tree"
+							style={{
+								opacity: khoiOpacity,
+							}}
+						/>
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
@@ -132,17 +142,19 @@ const Homepage = () => {
 						<motion.img
 							src={tran}
 							alt="tran"
-							style={{ x: turnL }}
 							className="absolute inset-0"
+							style={{
+								opacity: khoiOpacity,
+							}}
 						/>
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
 						factorX={0.1}
 						factorY={0.3}
-						className="absolute right-[-5%] top-[60%] w-xl h-xl z-[15] hidden lg:block"
+						className="absolute right-[-5%] top-[65%] w-xl h-xl z-[15] hidden lg:block"
 					>
-						<motion.img src={da} alt="da" style={{ x: turnL }} />
+						<motion.img src={da} alt="da" style={{ opacity: khoiOpacity }} />
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
@@ -150,7 +162,14 @@ const Homepage = () => {
 						factorY={0.3}
 						className="absolute top-[0%] right-[-20%] w-180 h-200 z-10 hidden lg:block "
 					>
-						<motion.img src={tree1} alt="tree" style={{ x: turnL }} />
+						<motion.img
+							src={tree1}
+							alt="tree"
+							style={{
+								opacity: khoiOpacity,
+								y,
+							}}
+						/>
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
@@ -161,22 +180,20 @@ const Homepage = () => {
 						<motion.img
 							src={stone}
 							alt="stone"
-							style={{ translateX: turnR }}
-							className="w-screen absolute bottom-[44%]
+							className="w-screen absolute bottom-[44%] scale-x-125
 						"
 						/>
 					</MouseParallaxChild>
 
-					<MouseParallaxChild
+					{/* <MouseParallaxChild
 						factorX={0.1}
-						factorY={0.3}
-						className="absolute left-0 right-0 bottom-0 z-10 hidden lg:block"
-					>
+						factorY={0.3} */}
+					<div className="absolute left-0 right-0 bottom-0 z-10 hidden lg:block">
 						<motion.img
 							src={land}
 							alt="land"
-							style={{ translateX: turnL }}
 							className="w-screen"
+							style={{ scale: scaleCong }}
 						/>
 
 						<a href="/intro">
@@ -204,7 +221,8 @@ const Homepage = () => {
 							alt="hrShadow"
 							className="absolute w-32 left-[50%] translate-x-[-60%] md:bottom-[20%] z-10"
 						/>
-					</MouseParallaxChild>
+					</div>
+					{/* </MouseParallaxChild> */}
 
 					<motion.div
 						className="font-Treacherous text-xl fixed left-0 right-0 bottom-[20%] md:bottom-[15%] h-30 z-[19] w-full md:flex md:justify-between"
@@ -213,22 +231,18 @@ const Homepage = () => {
 						<CountdownTimer />
 					</motion.div>
 
-					<a
+					<motion.a
 						href="https://docs.google.com/document/u/0/"
 						target="_blank"
-						className="absolute w-full h-full bottom-[5%] left-1/2 -translate-x-1/2 z-10"
+						className="absolute w-76 z-[20] bottom-[50%] lg:bottom-[5%] left-1/2 -translate-x-1/2"
+						style={{ scale, y }}
 					>
-						<motion.div
-							className="absolute w-76 z-10 bottom-[50%] lg:bottom-[5%] left-1/2 -translate-x-1/2"
-							style={{ scale, y }}
-						>
-							<motion.img src={nut} alt="nut" />
+						<motion.img src={nut} alt="nut" />
 
-							<motion.div className="absolute text-center top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 z-10 font-HP text-2xl text-[#ffffff] font-bold uppercase">
-								Thể lệ cuộc thi
-							</motion.div>
+						<motion.div className="absolute text-center top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 z-10 font-HP text-2xl text-[#ffffff] font-bold uppercase">
+							Thể lệ cuộc thi
 						</motion.div>
-					</a>
+					</motion.a>
 
 					<motion.img
 						className="absolute w-lg left-1/2 -translate-x-[50%] top-[15%] lg:top-[35%] z-[50]"

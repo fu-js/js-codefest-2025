@@ -1,59 +1,58 @@
 import { cn } from "../lib/utils"; // Assuming you have a utility function for classnames
-import { Link as ScrollLink } from "react-scroll";
 import font from "../assets/images/font.png";
-import { useState } from "react";
+// import { motion, useScroll } from "motion/react";
+import { useEffect, useState } from "react";
+import useScroll from "./hooks/use-scroll";
 const navItems1 = [
-	{ to: "homepage", label: "Trang chủ" },
-	{ to: "intro", label: "Giới thiệu" },
-	{ to: "information", label: "Thông tin" },
+	{ to: "#homepage", label: "Trang chủ" },
+	{ to: "#intro", label: "Giới thiệu" },
+	{ to: "#information", label: "Thông tin" },
 ];
 
 const navItems2 = [
-	{ to: "reason", label: "Quyền lợi" },
-	{ to: "timeline", label: "Timeline" },
-	{ to: "question", label: "FAQ" },
+	{ to: "#reason", label: "Quyền lợi" },
+	{ to: "#timeline", label: "Timeline" },
+	{ to: "#question", label: "Câu hỏi thường gặp" },
 ];
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const scroll = useScroll();
+
 	const handleOpen = () => setIsOpen(!isOpen);
+
 	return (
 		<>
 			<header
 				id="header"
-				className="fixed top-0 left-0 right-0 p-4 z-[1000] uppercase font-bold text-xl text-[#1D2C48] bg-gradient-to-b from-[#f9f9f9] to-[#ffffff] backdrop-blur-lg shadow-xs border-b border-[#92ACFA] transition-all duration-300"
+				className={cn(
+					"fixed top-0 left-0 right-0 p-4 z-[1000] uppercase font-bold text-xl transition-all duration-300",
+					scroll > 100
+						? "bg-white text-[#1D2C48] shadow-xs"
+						: "bg-gradient-to-b from-[#1D2C48] to-transparent text-white"
+				)}
 			>
 				{/* Desktop header  */}
 				<div className="hidden md:block container mx-auto font-HP tracking-wider">
 					<nav className="grid grid-cols-7">
 						{navItems1.map((item, index) => (
-							<ScrollLink
+							<a
 								key={index}
-								to={item.to}
-								smooth={true}
-								duration={700}
-								spy={true}
-								activeClass="text-primary"
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300"
-								offset={-100}
+								href={item.to}
+								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center"
 							>
 								{item.label}
-							</ScrollLink>
+							</a>
 						))}
 
 						<Logo className={"md:col-span-1"} />
 						{navItems2.map((item, index) => (
-							<ScrollLink
+							<a
 								key={index}
-								to={item.to}
-								smooth={true}
-								duration={700}
-								spy={true}
-								activeClass="text-primary"
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300"
-								offset={-100}
+								href={item.to}
+								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center"
 							>
 								{item.label}
-							</ScrollLink>
+							</a>
 						))}
 					</nav>
 				</div>
@@ -71,34 +70,24 @@ const Header = () => {
 						onClick={handleOpen}
 					>
 						{navItems1.map((item, index) => (
-							<ScrollLink
+							<a
 								key={index}
-								to={item.to}
-								smooth={true}
-								duration={700}
-								spy={true}
-								activeClass="text-primary"
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300"
-								offset={-100}
+								href={item.to}
+								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center"
 								onClick={handleOpen}
 							>
 								{item.label}
-							</ScrollLink>
+							</a>
 						))}
 						{navItems2.map((item, index) => (
-							<ScrollLink
+							<a
 								key={index}
-								to={item.to}
-								smooth={true}
-								duration={700}
-								spy={true}
-								activeClass="text-primary"
+								href={item.to}
 								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300"
-								offset={-100}
 								onClick={handleOpen}
 							>
 								{item.label}
-							</ScrollLink>
+							</a>
 						))}
 					</nav>
 				)}

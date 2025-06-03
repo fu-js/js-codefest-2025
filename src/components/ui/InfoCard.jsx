@@ -18,46 +18,51 @@ const InfoCard = ({
 		>
 			{direction === "top" && (
 				<>
-					<h1
-						className={cn(
-							"w-full text-center text-2xl font-Treacherous tracking-wider font-bold text-[#92ACFA] uppercase max-w-[286px]",
-							tClass
-						)}
-						dangerouslySetInnerHTML={{ __html: title }}
-					></h1>
 					<img
 						src={image}
 						alt={title}
 						className={cn("absolute z-[100]", imgClass)}
 					/>
-					<motion.div
-						className={cn(
-							"p-4 tracking-wide leading-[1.6rem] w-[300px] text-wrap",
-							pClass
-						)}
-					>
-						{children}
-					</motion.div>
+					<div className="flex flex-col items-center">
+						<h1
+							className={cn(
+								"w-full text-center text-2xl font-Treacherous tracking-wider font-bold text-[#92ACFA] uppercase max-w-[286px]",
+								tClass
+							)}
+							dangerouslySetInnerHTML={{ __html: title }}
+						></h1>
+						<motion.div
+							className={cn(
+								"p-4 tracking-wide leading-[1.6rem] w-[300px] text-wrap",
+								pClass
+							)}
+						>
+							{children}
+						</motion.div>
+					</div>
 				</>
 			)}
 
 			{direction === "bottom" && (
 				<>
-					<motion.div
-						className={cn(
-							"p-4 tracking-wide leading-[1.6rem] w-[300px] text-wrap",
-							pClass
-						)}
-					>
-						{children}
-					</motion.div>
-					<h1
-						className={cn(
-							"w-full text-center text-2xl font-Treacherous tracking-wider font-bold text-[#92ACFA] uppercase max-w-[286px]",
-							tClass
-						)}
-						dangerouslySetInnerHTML={{ __html: title }}
-					></h1>
+					<div className="flex flex-col-reverse md:flex-col items-center">
+						<motion.div
+							className={cn(
+								"p-4 tracking-wide leading-[1.6rem] w-[300px] text-wrap",
+								pClass
+							)}
+						>
+							{children}
+						</motion.div>
+
+						<h1
+							className={cn(
+								"w-full text-center text-2xl font-Treacherous tracking-wider font-bold text-[#92ACFA] uppercase max-w-[286px]",
+								tClass
+							)}
+							dangerouslySetInnerHTML={{ __html: title }}
+						></h1>
+					</div>
 					<img
 						src={image}
 						alt={title}

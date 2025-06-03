@@ -6,7 +6,6 @@ import {
 	useTransform,
 	useInView,
 } from "motion/react";
-import bg from "../assets/images/nencover_resize.png";
 import hero from "../assets/images/hero3.webp";
 
 import {
@@ -64,7 +63,7 @@ const texts = [
 const ReasonPage = () => {
 	const ref = useRef(null);
 
-	const isViewed = useInView(ref);
+	const isViewed = useInView(ref, { once: true });
 
 	return (
 		<>
@@ -86,8 +85,8 @@ const ReasonPage = () => {
 			>
 				<motion.div className="w-full relative flex flex-col items-center justify-center">
 					<motion.div
-						initial={{ opacity: 0, x: -100, scale: 0.5 }}
-						whileInView={{ opacity: 1, x: 0, scale: 1 }}
+						initial={{ opacity: 0, x: -100, scale: 0.8 }}
+						whileInView={{ opacity: 1, x: 0, scale: 1.5 }}
 						transition={{ duration: 0.3, ease: "easeInOut" }}
 						className="absolute right-0 md:left-1/2 transform md:translate-x-1/2 bottom-0 size-64 object-cover z-10"
 						style={{

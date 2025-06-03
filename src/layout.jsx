@@ -1,4 +1,4 @@
-import Header from "./components/header";
+import Header from "./components/Header";
 import { Outlet } from "react-router";
 import Loader from "./components/ui/Loader";
 import { useScroll, useTransform, motion } from "motion/react";

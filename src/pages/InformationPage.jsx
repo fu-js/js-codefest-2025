@@ -36,7 +36,7 @@ const words = [
 
 const InformationPage = () => {
 	const ref = useRef(null);
-	const isViewed = useInView(ref);
+	const isViewed = useInView(ref, { once: true });
 	return (
 		<div
 			id="information"

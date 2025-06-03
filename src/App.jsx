@@ -11,14 +11,12 @@ import {
 } from "framer-motion";
 import khoi from "./assets/images/khoi.webp";
 
-import ParallaxSection from "./components/ParallaxSection";
 import Homepage from "./pages/Homepage";
 import IntroPage from "./pages/IntroPage";
 import ReasonPage from "./pages/ReasonPage";
 import TimelinePage from "./pages/TimelinePage";
 import QuestionPage from "./pages/QuestionPage";
 import InformationPage from "./pages/InformationPage";
-import FormPage from "./pages/FormPage";
 
 const App = () => {
 	const targetRef = useRef(null);
@@ -75,11 +73,11 @@ const App = () => {
 						className="relative h-screen"
 						// className="relative h-screen before:pointer-events-none before:fixed before:inset-0 before:z-0 before:bg-[radial-gradient(circle_farthest-side_at_var(--x,_100px)_var(--y,_100px),_var(--color-primary)_0%,_transparent_100%)] before:opacity-40"
 					>
-						{/* <img
+						<img
 							className="fixed bottom-0 left-0 right-0 opacity-10 z-[1]"
 							src={khoi}
 							alt=""
-						/> */}
+						/>
 						<Homepage />
 						<IntroPage />
 						<InformationPage />

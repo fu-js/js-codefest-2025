@@ -77,7 +77,7 @@ export const Terminal = ({ children, className }) => {
 	return (
 		<div
 			className={cn(
-				"z-0 h-full max-h-[500px] md:min-w-[600px] w-full max-w-lg rounded-xl border border-primary bg-base-100",
+				"z-0 h-full max-h-[500px] min-w-md md:min-w-lg lg:min-w-4xl w-full rounded-xl border border-primary bg-base-100",
 				className
 			)}
 		>
@@ -88,7 +88,7 @@ export const Terminal = ({ children, className }) => {
 					<div className="h-2 w-2 rounded-full bg-green-500"></div>
 				</div>
 			</div>
-			<pre className="p-4 md:text-3xl">
+			<pre className="p-4 text-xl md:text-3xl">
 				<code className="grid gap-y-1 overflow-auto">{children}</code>
 			</pre>
 		</div>
