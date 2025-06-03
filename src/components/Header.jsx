@@ -38,7 +38,7 @@ const Header = () => {
 							<a
 								key={index}
 								href={item.to}
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center"
+								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary text-nowrap transition-colors duration-300 text-center"
 							>
 								{item.label}
 							</a>
@@ -49,7 +49,7 @@ const Header = () => {
 							<a
 								key={index}
 								href={item.to}
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center"
+								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary text-nowrap transition-colors duration-300 text-center"
 							>
 								{item.label}
 							</a>
@@ -73,7 +73,7 @@ const Header = () => {
 							<a
 								key={index}
 								href={item.to}
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center"
+								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center text-nowrap"
 								onClick={handleOpen}
 							>
 								{item.label}
@@ -83,7 +83,7 @@ const Header = () => {
 							<a
 								key={index}
 								href={item.to}
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300"
+								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-nowrap"
 								onClick={handleOpen}
 							>
 								{item.label}
