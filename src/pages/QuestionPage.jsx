@@ -35,21 +35,17 @@ const QuestionPage = () => {
 			<AnimatePresence mode="wait">
 				{isViewed && (
 					<>
-						<motion.div className="hero">
-							<div className="hero-content flex-col gap-12">
-								<div className="text-center overflow-hidden">
-									<motion.div
-										intial={{ opacity: 0, x: -100 }}
-										whileInView={{ opacity: 1, x: 0 }}
-										transition={{ duration: 1 }}
-										viewport={{ root: ref }}
-										className="text-4xl md:text-6xl lg:text-8xl font-bold z-10 m-8"
-									>
-										<TypewriterEffect words={words} />
-									</motion.div>
-								</div>
-								<MessengerFAQ />
-							</div>
+						<motion.div className="flex flex-col justify-center items-center gap-24">
+							<motion.div
+								intial={{ opacity: 0, x: -100 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{ duration: 1 }}
+								viewport={{ root: ref }}
+								className="text-4xl md:text-6xl lg:text-8xl font-bold z-10 m-8"
+							>
+								<TypewriterEffect words={words} />
+							</motion.div>
+							<MessengerFAQ />
 						</motion.div>
 					</>
 				)}

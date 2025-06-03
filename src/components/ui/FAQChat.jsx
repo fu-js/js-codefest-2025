@@ -113,7 +113,7 @@ export function MessengerFAQ() {
 	};
 
 	return (
-		<div className="flex h-[80vh] font-sans w-md md:w-3xl lg:w-5xl bg-base-100 shadow-2xl rounded-2xl overflow-hidden border border-primary">
+		<div className="flex h-[70vh] md:h-[80vh] font-sans w-[368px] md:w-3xl lg:w-5xl bg-base-100 shadow-2xl rounded-2xl overflow-hidden border border-primary">
 			{/* Sidebar */}
 			<div
 				className={`${
