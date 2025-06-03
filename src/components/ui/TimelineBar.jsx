@@ -31,7 +31,7 @@ export default function TimelineBar() {
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
 							13/08 - 31/08
 						</div>
-						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success hidden lg:block md:text-l leading-[2rem]">
+						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success md:text-l leading-[2rem]">
 							<li>
 								Các thí sinh đăng ký cá nhân hoặc theo đội (3 - 4 thành
 								viên/đội).
@@ -74,7 +74,7 @@ export default function TimelineBar() {
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
 							01/09 - 14/09
 						</div>
-						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success hidden lg:block text-xl leading-[2rem]">
+						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-xl leading-[2rem]">
 							<li>
 								Sau khi kết thúc vòng đăng ký, các đội thi bước vào vòng
 								training với sự hướng dẫn của những mentor dày dặn kinh nghiệm.
@@ -118,7 +118,7 @@ export default function TimelineBar() {
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
 							15/09/2025
 						</div>
-						<p className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success hidden lg:block leading-[2rem]">
+						<p className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success leading-[2rem]">
 							<li>
 								Các đội chơi tham gia thi đấu chính thức tại trường Đại học FPT
 								Hà Nội.

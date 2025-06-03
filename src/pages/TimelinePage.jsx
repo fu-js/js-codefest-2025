@@ -52,7 +52,7 @@ const TimelinePage = () => {
 									<motion.img
 										src={dragon}
 										alt="dragon"
-										className="w-full h-full object-cover"
+										className="w-full h-full object-cover hidden lg:block"
 									/>
 								</MouseParallaxChild>
 							</motion.div>

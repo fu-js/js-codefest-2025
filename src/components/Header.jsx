@@ -32,24 +32,24 @@ const Header = () => {
 				)}
 			>
 				{/* Desktop header  */}
-				<div className="hidden md:block container mx-auto font-HP tracking-wider">
-					<nav className="grid grid-cols-7">
+				<div className="hidden lg:block container mx-auto font-HP tracking-wider">
+					<nav className="flex items-center justify-between">
 						{navItems1.map((item, index) => (
 							<a
 								key={index}
 								href={item.to}
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary text-nowrap transition-colors duration-300 text-center"
+								className=" flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary text-nowrap transition-colors duration-300 text-center"
 							>
 								{item.label}
 							</a>
 						))}
 
-						<Logo className={"md:col-span-1"} glow={false} />
+						<Logo glow={true} />
 						{navItems2.map((item, index) => (
 							<a
 								key={index}
 								href={item.to}
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary text-nowrap transition-colors duration-300 text-center"
+								className=" flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary text-nowrap transition-colors duration-300 text-center"
 							>
 								{item.label}
 							</a>
@@ -57,8 +57,8 @@ const Header = () => {
 					</nav>
 				</div>
 				{/* Mobile header  */}
-				<div className="md:hidden container mx-auto flex justify-between items-center font-HP tracking-wider">
-					<Logo glow={false} />
+				<div className="lg:hidden container mx-auto flex justify-between items-center font-HP tracking-wider">
+					<Logo glow={true} />
 					<button className="btn btn-ghost" onClick={handleOpen}>
 						{isOpen ? <CloseIcon /> : <MenuIcon />}
 					</button>
@@ -73,7 +73,7 @@ const Header = () => {
 							<a
 								key={index}
 								href={item.to}
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center text-nowrap"
+								className=" flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center text-nowrap"
 								onClick={handleOpen}
 							>
 								{item.label}
@@ -83,7 +83,7 @@ const Header = () => {
 							<a
 								key={index}
 								href={item.to}
-								className="col-span-1 flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-nowrap"
+								className=" flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-nowrap"
 								onClick={handleOpen}
 							>
 								{item.label}
@@ -105,11 +105,7 @@ const Logo = ({ className, glow = true }) => {
 				className ? className : ""
 			}`}
 		>
-			<img
-				src={glow ? font : fontNoGlow}
-				alt="logo"
-				className="w-36 md:w-[256px]"
-			/>
+			<img src={glow ? font : fontNoGlow} alt="logo" className="w-24 md:w-36" />
 		</div>
 	);
 };

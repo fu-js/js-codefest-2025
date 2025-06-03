@@ -11,8 +11,9 @@ import tree1 from "../assets/images/tree22.webp";
 import tree2 from "../assets/images/download.webp";
 import tran from "../assets/images/anacon.png";
 import da from "../assets/images/da2_bg.webp";
+import da2 from "../assets/images/da3.webp";
+import da3 from "../assets/images/da2.webp";
 import font from "../assets/images/font.png";
-import nut from "../assets/images/khung.png";
 import light2 from "../assets/images/cloud_light.png";
 
 import {
@@ -22,6 +23,7 @@ import {
 import CountdownTimer from "../components/countdown/CountdownTimer";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import LongBtn from "../components/ui/LongBtn";
 
 const Homepage = () => {
 	const ref = useRef(null);
@@ -69,7 +71,6 @@ const Homepage = () => {
 							backgroundImage: `url(${bgImg2})`,
 							backgroundSize: "cover",
 							backgroundPosition: "center",
-
 							backgroundRepeat: "no-repeat",
 							backgroundAttachment: "fixed",
 						}}
@@ -87,7 +88,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.5}
 						factorY={0.3}
-						className="absolute top-[-15%] left-[-15%] w-180 h-200 z-10 hidden lg:block"
+						className="absolute top-[-15%] left-[-15%] w-180 h-200 z-10 hidden lg:block opacity-50"
 					>
 						<motion.img
 							src={tree2}
@@ -101,12 +102,12 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.2}
 						factorY={0.4}
-						className="absolute top-[10%] left-[-5%] md:left-0 w-2xl h-xl z-10 hidden lg:block"
+						className="absolute top-[10%] left-[-5%] md:left-0 w-2xl h-xl z-10 hidden lg:block opacity-75"
 					>
 						<motion.img
 							src={drG}
 							alt="dragon"
-							className="opacity-70 absolute"
+							className="absolute"
 							style={{
 								opacity: hidden,
 							}}
@@ -145,9 +146,16 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.1}
 						factorY={0.3}
-						className="absolute right-[-5%] top-[65%] w-xl h-xl z-[15] hidden lg:block"
+						className="absolute right-[-5%] top-[65%] w-xl h-xl z-[12] hidden lg:block"
 					>
 						<motion.img src={da} alt="da" style={{ opacity: hidden }} />
+					</MouseParallaxChild>
+					<MouseParallaxChild
+						factorX={0.1}
+						factorY={0.3}
+						className="absolute left-0 top-52 w-lg h-xl z-[20] hidden lg:block"
+					>
+						<motion.img src={da2} alt="da" style={{ opacity: hidden }} />
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
@@ -173,8 +181,7 @@ const Homepage = () => {
 						<motion.img
 							src={stone}
 							alt="stone"
-							className="w-screen absolute bottom-[44%] scale-x-125
-						"
+							className="w-screen absolute bottom-[44%] scale-x-125"
 						/>
 					</MouseParallaxChild>
 
@@ -188,7 +195,7 @@ const Homepage = () => {
 
 						<a href="/intro">
 							<motion.img
-								className="absolute w-80 left-1/2 translate-x-[-60%] md:bottom-[50%] h-auto z-10 cursor-pointer"
+								className="absolute w-64 lg:w-[360px] left-1/2 translate-x-[-62%] md:bottom-[45%] h-auto z-10 cursor-pointer"
 								src={cong}
 								style={{
 									scale: scaleCong,
@@ -199,7 +206,7 @@ const Homepage = () => {
 						<motion.img
 							src={hero}
 							alt="hero"
-							className="absolute w-32 left-1/2 bottom-[40%] translate-x-[-50%] z-[11]"
+							className="absolute w-40 left-1/2 bottom-[30%] translate-x-[-50%] z-[11]"
 							style={{
 								opacity: hidden,
 								y,
@@ -209,7 +216,7 @@ const Homepage = () => {
 							style={{ y, opacity: hidden }}
 							src={hrShadow}
 							alt="hrShadow"
-							className="absolute w-32 left-[50%] translate-x-[-60%] md:bottom-[20%] z-10"
+							className="absolute w-44 left-[50%] translate-x-[-60%] md:bottom-0 z-10"
 						/>
 					</div>
 
@@ -220,21 +227,20 @@ const Homepage = () => {
 						<CountdownTimer />
 					</motion.div>
 
-					<motion.a
-						href="https://docs.google.com/document/u/0/"
-						target="_blank"
-						className="absolute w-76 z-[20] bottom-[50%] lg:bottom-[5%] left-1/2 -translate-x-1/2"
+					<motion.div
+						className="absolute z-[20] bottom-[50%] lg:top-[52%] left-[48%] -translate-x-1/2 flex items-center gap-4"
 						style={{ scale, y }}
 					>
-						<motion.img src={nut} alt="nut" />
-
-						<motion.div className="absolute text-center top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 z-10 font-HP text-2xl text-[#ffffff] font-bold uppercase">
-							Thể lệ cuộc thi
-						</motion.div>
-					</motion.a>
+						<a href="">
+							<LongBtn>Thể lệ cuộc thi</LongBtn>
+						</a>
+						<a href="">
+							<LongBtn>Đăng ký</LongBtn>
+						</a>
+					</motion.div>
 
 					<motion.img
-						className="absolute w-lg left-1/2 translate-x-[-50%] lg:-translate-x-[58%] top-[15%] lg:top-[35%] z-[50]"
+						className="absolute w-2xl left-1/2 translate-x-[-50%] lg:-translate-x-[55%] top-[15%] lg:top-[20%] z-[50]"
 						src={font}
 						style={{ scale: scaleFont, y }}
 					/>

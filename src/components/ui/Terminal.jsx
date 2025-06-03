@@ -8,7 +8,7 @@ export const AnimatedSpan = ({ children, delay = 0, className, ...props }) => (
 		animate={{ opacity: 1, y: 0 }}
 		transition={{ duration: 0.3, delay: delay / 1000 }}
 		className={cn(
-			"grid text-sm md:text-xl font-normal tracking-tight",
+			"grid text-xl md:text-2xl font-normal tracking-tight",
 			className
 		)}
 		{...props}
@@ -65,7 +65,10 @@ export const TypingAnimation = ({
 	return (
 		<MotionComponent
 			ref={elementRef}
-			className={cn("text-sm md:text-xl font-normal tracking-tight", className)}
+			className={cn(
+				"text-2xl md:text-3xl font-normal tracking-tight",
+				className
+			)}
 			{...props}
 		>
 			{displayedText}
