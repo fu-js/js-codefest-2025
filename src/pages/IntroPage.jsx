@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { TypewriterEffect } from "../components/ui/TextGenerate";
-
+import pc from "/intropc.png";
+import mobile from "/intromb.png";
 const words = [
 	{
 		text: "NHÀ",
@@ -48,7 +49,7 @@ const IntroPage = () => {
 				ref={ref}
 				className="relative flex flex-col justify-center items-center w-full min-h-screen bg-base-300"
 			>
-				<motion.div className="w-full h-full overflow-hidden">
+				<motion.div className="w-full h-full overflow-hidden py-18">
 					<motion.div>
 						{isViewed && (
 							<>
@@ -63,6 +64,22 @@ const IntroPage = () => {
 									className="text-4xl md:text-6xl lg:text-8xl font-bold z-10"
 								>
 									<TypewriterEffect words={words2} />
+								</motion.div>
+								<motion.div
+									initial={{ opacity: 0, x: -50 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{ duration: 1, type: "spring" }}
+									className="hidden md:flex w-full items-center justify-center mt-8"
+								>
+									<img src={pc} alt="" className="mx-auto" />
+								</motion.div>
+								<motion.div
+									initial={{ opacity: 0, x: -50 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{ duration: 1, type: "spring" }}
+									className="w-full flex md:hidden items-center justify-center mt-8"
+								>
+									<img src={mobile} alt="" className="mx-auto max-w-sm" />
 								</motion.div>
 							</>
 						)}

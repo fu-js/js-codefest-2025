@@ -64,14 +64,14 @@ const ReasonPage = () => {
 			<motion.div
 				ref={ref}
 				id="reason"
-				className="relative flex flex-col items-center justify-center min-h-screen scroll-smooth overflow-hidden bg-base-300 pt-44 md:pt-0"
+				className="relative flex flex-col items-center justify-center min-h-screen scroll-smooth overflow-hidden bg-base-300 py-44 md:pt-0"
 			>
 				<motion.div className="w-full relative flex flex-col items-center justify-center">
 					<motion.div
 						initial={{ opacity: 0, x: -100, scale: 0.8 }}
 						whileInView={{ opacity: 1, x: 0, scale: 1.5 }}
 						transition={{ duration: 0.3, ease: "easeInOut" }}
-						className="absolute right-0 md:left-[45%] transform md:translate-x-1/2 bottom-0 size-64 md:size-80 object-cover z-10"
+						className="absolute right-0 md:left-[45%] transform md:translate-x-1/2 bottom-0 size-56 md:size-64 lg:size-80 object-cover z-10"
 						style={{
 							backgroundImage: `url(${hero})`,
 							backgroundSize: "cover",
@@ -86,7 +86,7 @@ const ReasonPage = () => {
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ duration: 1 }}
 									viewport={{ root: ref }}
-									className="text-4xl md:text-6xl lg:text-8xl font-bold z-10"
+									className="text-4xl md:text-6xl lg:text-8xl font-bold z-10 text-center text-wrap max-w-[80%] md:max-w-full"
 								>
 									<TypewriterEffect words={words} />
 								</motion.div>
@@ -94,7 +94,7 @@ const ReasonPage = () => {
 									initial={{ opacity: 0, scale: 0.8 }}
 									animate={{ opacity: 1, scale: 1 }}
 									transition={{ duration: 0.5 }}
-									className="mt-24"
+									className="mt-8 lg:mt-24"
 								>
 									<Terminal>
 										<TypingAnimation>
@@ -110,7 +110,7 @@ const ReasonPage = () => {
 										</AnimatedSpan>
 
 										<AnimatedSpan delay={2500} className="text-green-500">
-											<span>✔ Nâng cao KIẾN THỨC và KĨ NĂNG lập trình"</span>
+											<span>✔ Nâng cao KIẾN THỨC và KĨ NĂNG lập trình</span>
 										</AnimatedSpan>
 
 										<AnimatedSpan delay={3000} className="text-green-500">
@@ -122,7 +122,7 @@ const ReasonPage = () => {
 										</AnimatedSpan>
 
 										<AnimatedSpan delay={4000} className="text-green-500">
-											<span>✔ Installing dependencies.</span>
+											<span>✔ Installing dependencies</span>
 										</AnimatedSpan>
 
 										<AnimatedSpan delay={4500} className="text-blue-500">

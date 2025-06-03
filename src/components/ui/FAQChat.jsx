@@ -6,7 +6,7 @@ const faqs = [
 		id: 1,
 		user: {
 			name: "Tuyền Nhân Minh Quang",
-			avatar: "/logo.webp",
+			avatar: "/naruto.jpg",
 			lastSeen: "2 phút trước",
 			isOnline: true,
 		},
@@ -21,8 +21,8 @@ const faqs = [
 	{
 		id: 2,
 		user: {
-			name: "Uchiha Sakana",
-			avatar: "/logo.webp",
+			name: "Phú Lê",
+			avatar: "/phule.jpg",
 			lastSeen: "5 phút trước",
 			isOnline: true,
 		},
@@ -35,8 +35,8 @@ const faqs = [
 	{
 		id: 3,
 		user: {
-			name: "Goku",
-			avatar: "/logo.webp",
+			name: "Đàm Vĩnh Hưng",
+			avatar: "/dam.jpg",
 			lastSeen: "10 phút trước",
 			isOnline: false,
 		},
@@ -49,8 +49,8 @@ const faqs = [
 	{
 		id: 4,
 		user: {
-			name: "Thuý Kiều",
-			avatar: "/logo.webp",
+			name: "CEO Nguyễn Tử Quảng",
+			avatar: "/ceo.jpg",
 			lastSeen: "15 phút trước",
 			isOnline: false,
 		},
@@ -65,7 +65,7 @@ const faqs = [
 		id: 5,
 		user: {
 			name: "Quân đội Hoa Kỳ",
-			avatar: "/logo.webp",
+			avatar: "/usa.jpg",
 			lastSeen: "1 giờ trước",
 			isOnline: false,
 		},
@@ -277,6 +277,28 @@ export function MessengerFAQ() {
 							</div>
 						</div>
 					))}
+
+					{/* Một số context  */}
+
+					<div className="flex justify-end">
+						<div className="flex items-end space-x-2 max-w-[280px] md:max-w-xs lg:max-w-md">
+							<div className="text-primary-content bg-primary border border-primary rounded-2xl rounded-br-md px-3 md:px-4 py-2">
+								<p className="text-sm leading-relaxed">
+									{selectedChat.id === 1 && "Hay thế 😍"}
+									{selectedChat.id === 2 && "Oge 😥"}
+									{selectedChat.id === 3 &&
+										"Vào lâu đài tình ái training cùng tớ ik"}
+									{selectedChat.id === 4 && "Thật không thể tin nổi 💣"}
+									{selectedChat.id === 5 && "Thế còn mấy thùng dầu ??"}
+								</p>
+							</div>
+							<img
+								src={selectedChat.user.avatar}
+								alt={selectedChat.user.name}
+								className="w-5 h-5 md:w-6 md:h-6 rounded-full object-cover flex-shrink-0"
+							/>
+						</div>
+					</div>
 				</div>
 
 				{/* Message Input */}
