@@ -71,7 +71,7 @@ const ReasonPage = () => {
 						initial={{ opacity: 0, x: -100, scale: 0.8 }}
 						whileInView={{ opacity: 1, x: 0, scale: 1.5 }}
 						transition={{ duration: 0.3, ease: "easeInOut" }}
-						className="absolute right-0 md:left-[45%] transform md:translate-x-1/2 bottom-0 size-56 md:size-64 lg:size-80 object-cover z-10"
+						className="absolute right-0 md:left-[45%] transform md:translate-x-1/2 -bottom-[25%] md:bottom-0 size-56 md:size-64 lg:size-80 object-cover z-10"
 						style={{
 							backgroundImage: `url(${hero})`,
 							backgroundSize: "cover",

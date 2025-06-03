@@ -69,7 +69,7 @@ const IntroPage = () => {
 									initial={{ opacity: 0, x: -50 }}
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ duration: 1, type: "spring" }}
-									className="hidden md:flex w-full items-center justify-center mt-8"
+									className="hidden md:flex w-full items-center justify-center mt-24"
 								>
 									<img src={pc} alt="" className="mx-auto" />
 								</motion.div>
@@ -77,7 +77,7 @@ const IntroPage = () => {
 									initial={{ opacity: 0, x: -50 }}
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ duration: 1, type: "spring" }}
-									className="w-full flex md:hidden items-center justify-center mt-8"
+									className="w-full flex md:hidden items-center justify-center mt-24"
 								>
 									<img src={mobile} alt="" className="mx-auto max-w-sm" />
 								</motion.div>

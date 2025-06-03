@@ -228,7 +228,7 @@ const Homepage = () => {
 					</motion.div>
 
 					<motion.div
-						className="absolute z-[20] bottom-[50%] lg:top-[52%] left-[48%] -translate-x-1/2 flex items-center gap-4"
+						className="absolute z-[20] bottom-[50%] top-[40%] lg:top-[52%] left-[48%] -translate-x-1/2 flex flex-col md:flex-row items-center gap-4"
 						style={{ scale, y }}
 					>
 						<a href="">
