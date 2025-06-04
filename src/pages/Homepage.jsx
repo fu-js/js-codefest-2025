@@ -56,7 +56,7 @@ const Homepage = () => {
 					className="w-full h-screen"
 				>
 					<div
-						className="bg inset-0 w-full h-full z-0 absolute"
+						className="bg-center inset-0 w-full h-full z-0 absolute scale-105"
 						style={{
 							backgroundImage: `url(${isMobile ? bgImg2 : bgImg})`,
 							backgroundSize: "cover",
@@ -243,7 +243,7 @@ const Homepage = () => {
 					</motion.div>
 
 					<motion.div
-						className="absolute z-[20] bottom-[55%] min-[1025px]:top-[52%] left-[48%] -translate-x-1/2 flex items-center md:gap-4"
+						className="absolute z-[20] bottom-[60%] min-[1025px]:top-[52%] left-[48%] -translate-x-1/2 flex sm:flex-row flex-col items-center gap-2 sm:gap-4"
 						style={{ scale, y }}
 					>
 						<a
@@ -260,7 +260,7 @@ const Homepage = () => {
 					</motion.div>
 
 					<motion.img
-						className="absolute w-lg md:w-xl min-[1025px]:w-2xl left-1/2 translate-x-[-50%] min-[1025px]:-translate-x-[55%] top-[10%] min-[1025px]:top-[20%] z-[50]"
+						className="absolute w-md scale-90 md:w-xl lg:w-2xl min-[1025px]:w-xl left-1/2 translate-x-[-50%] min-[1025px]:-translate-x-[55%] top-[8%] min-[1025px]:top-[20%] z-[50]"
 						src={font}
 						style={{ scale: scaleFont, y }}
 					/>

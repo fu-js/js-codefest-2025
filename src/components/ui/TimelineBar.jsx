@@ -23,7 +23,7 @@ export default function TimelineBar() {
 						style={{ lineHeight: 2 }}
 					>
 						<div
-							className="text-4xl text-warning font-HP mb-2 uppercase"
+							className="md:text-4xl text-3xl text-warning font-HP mb-2 uppercase"
 							style={{ lineHeight: 1.5 }}
 						>
 							Mở đơn đăng ký
@@ -31,14 +31,13 @@ export default function TimelineBar() {
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
 							06/06 - 18/06
 						</div>
-						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success md:text-l leading-[2rem]">
+						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-sm md:text-xl leading-[2rem]">
 							<li>
 								Các thí sinh đăng ký cá nhân hoặc theo đội (4 - 5 thành
-								viên/đội)
+								viên/đội).
 							</li>
 							<li>
-								Đối với các thí sinh đăng ký tự do, BTC sẽ hỗ trợ ghép đội cho
-								phù hợp.
+								Đối với các thí sinh đăng ký tự do, BTC sẽ hỗ trợ ghép đội.
 							</li>
 						</ul>
 					</div>
@@ -66,7 +65,7 @@ export default function TimelineBar() {
 						style={{ lineHeight: 2 }}
 					>
 						<div
-							className="text-4xl text-warning font-HP mb-2 uppercase"
+							className="md:text-4xl text-3xl text-warning font-HP mb-2 uppercase"
 							style={{ lineHeight: 1.5 }}
 						>
 							Giai đoạn Training
@@ -74,18 +73,18 @@ export default function TimelineBar() {
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
 							21/06 - 29/06
 						</div>
-						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-xl leading-[2rem]">
+						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-sm md:text-xl leading-[2rem]">
 							<li>
 								Sau khi kết thúc vòng đăng ký, các đội thi bước vào vòng
 								training với sự hướng dẫn của những mentor dày dặn kinh nghiệm.
 							</li>
 							<li>
 								Các đội thi sẽ được cung cấp hướng dẫn chi tiết về cách thức lập
-								trình và tối ưu hóa con bot, cũng như chiến lược thu thập vật
-								phẩm, và chiến đấu trên các bản đồ.
+								trình và tối ưu hóa hero, cũng như chiến lược thu thập vật
+								phẩm, chiến đấu trên các bản đồ.
 							</li>
 							<li>
-								Đồng thời các đội thi sẽ phát triển và tối ưu con bot của riêng
+								Đồng thời các đội thi sẽ phát triển và tối ưu hero của riêng
 								mình.
 							</li>
 						</ul>
@@ -110,7 +109,7 @@ export default function TimelineBar() {
 					</div>
 					<div className="timeline-end ml-6 text-xl" style={{ lineHeight: 2 }}>
 						<div
-							className="text-4xl text-warning font-HP mb-2 uppercase"
+							className="md:text-4xl text-3xl text-warning font-HP mb-2 uppercase"
 							style={{ lineHeight: 1.5 }}
 						>
 							Vòng Chung kết
@@ -118,13 +117,13 @@ export default function TimelineBar() {
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
 							15/07
 						</div>
-						<p className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success leading-[2rem]">
+						<p className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-sm md:text-xl leading-[2rem]">
 							<li>
 								Các đội chơi tham gia thi đấu chính thức tại trường Đại học FPT
 								Hà Nội (BTC sẽ hỗ trợ xe đưa đón).
 							</li>
 							<li>
-								Đây là lúc các đội đem những con bot mình đã chuẩn bị để tranh
+								Đây là lúc các đội đem những "chàng hero tài năng" mà mình đã chuẩn bị để tranh
 								tài cùng nhau trên chiến trường khốc liệt.
 							</li>
 						</p>

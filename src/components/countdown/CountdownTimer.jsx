@@ -3,7 +3,7 @@ import khung from "/images/square.webp";
 
 const TimeBlock = ({ children, label }) => (
 	<div
-		className="drop-shadow-lg drop-shadow-black text-center size-30 lg:size-38 flex flex-col items-center justify-center"
+		className="-mx-8 sm:mx-4 drop-shadow-lg drop-shadow-black text-center size-30 lg:size-40 flex flex-col items-center justify-center"
 		style={{ backgroundImage: `url(${khung})`, backgroundSize: "cover" }}
 	>
 		<p className="text-white text-stroke font-HP font-extrabold text-4xl lg:text-5xl drop-shadow-[4px_4px_#1D2C48]">

@@ -30,7 +30,7 @@ const TimelinePage = () => {
 		<motion.div
 			id="timeline"
 			ref={ref}
-			className="w-full bg-base-300 relative flex flex-col items-center justify-center min-h-screen py-18 px-20 lg:px-0"
+			className="w-full bg-base-300 relative flex flex-col items-center justify-center min-h-screen py-8 sm:py-18 px-6 sm:px-20 lg:px-0"
 		>
 			<MouseParallaxContainer
 				globalFactorX={0.1}
@@ -65,7 +65,7 @@ const TimelinePage = () => {
 							>
 								<TypewriterEffect words={words} />
 							</motion.div>
-							<div className="mt-24">
+							<div className="lg:mt-24 mt-16">
 								<TimelineBar />
 							</div>
 						</>

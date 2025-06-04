@@ -88,7 +88,7 @@ const IntroPage = () => {
 									transition={{ duration: 1, type: "spring" }}
 									className="w-full flex md:hidden items-center justify-center mt-24"
 								>
-									<img src={mobile} alt="" className="mx-auto max-w-sm" />
+									<img src={mobile} alt="" className="mx-auto max-w-xs" />
 								</motion.div>
 							</>
 						)}

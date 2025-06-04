@@ -41,7 +41,7 @@ const QuestionPage = () => {
 								whileInView={{ opacity: 1, x: 0 }}
 								transition={{ duration: 1 }}
 								viewport={{ root: ref }}
-								className="text-4xl md:text-6xl lg:text-8xl font-bold z-10 m-8"
+								className="text-4xl md:text-6xl lg:text-8xl font-bold z-10"
 							>
 								<TypewriterEffect words={words} />
 							</motion.div>
