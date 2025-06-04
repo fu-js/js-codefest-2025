@@ -87,7 +87,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.2}
 						factorY={0.3}
-						className="absolute inset-0 z-[2] hidden min-[1025px]:block opacity-50"
+						className="absolute top-[-15%] xl:left-[-15%] left-[-11%] w-180 h-200 z-10 hidden min-[1025px]:block opacity-50"
 					>
 						<motion.img
 							src={tree2}
@@ -95,19 +95,32 @@ const Homepage = () => {
 							style={{
 								opacity: hidden,
 							}}
-							className="absolute w-120 h-140 xl:w-180 xl:h-200"
 						/>
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
-						factorX={0.1}
-						factorY={0.1}
-						className="absolute inset-0 z-[3] hidden min-[1025px]:block opacity-80"
+						factorX={0.2}
+						factorY={0.4}
+						className="absolute top-[2%] left-[-5%] md:left-16 w-2xl h-xl z-10 hidden xl:block opacity-80"
 					>
 						<motion.img
 							src={drG}
 							alt="dragon"
-							className="absolute w-lg h-lg xl:w-xl xl:h-lg left-[10%] top-[10%]"
+							className="absolute"
+							style={{
+								opacity: hidden,
+							}}
+						/>
+					</MouseParallaxChild>
+
+					<MouseParallaxChild
+						factorX={0.4}
+						factorY={0.2}
+						className="absolute top-[-5%] xl:right-[-8%] right-[-4%] w-180 h-200 z-10 hidden min-[1025px]:block opacity-40 -scale-x-100"
+					>
+						<motion.img
+							src={tree1}
+							alt="tree"
 							style={{
 								opacity: hidden,
 							}}
@@ -116,28 +129,13 @@ const Homepage = () => {
 
 					<MouseParallaxChild
 						factorX={0.3}
-						factorY={0.1}
-						className="absolute inset-0 z-10 hidden min-[1025px]:block opacity-70"
-					>
-						<motion.img
-							src={tree1}
-							alt="tree"
-							style={{
-								opacity: hidden,
-							}}
-							className="w-180 h-200 -scale-x-100 translate-x-[-40%]"
-						/>
-					</MouseParallaxChild>
-
-					<MouseParallaxChild
-						factorX={0.1}
-						factorY={0.1}
-						className="absolute inset-0 z-10 hidden min-[1025px]:block"
+						factorY={0.3}
+						className="absolute right-0 min-[1025px]:right-[12%] -translate-y-36 w-3xl h-xl z-10 hidden xl:block"
 					>
 						<motion.img
 							src={tran}
 							alt="tran"
-							className="absolute right-[20%] bottom-[-1%] w-2xl h-xl"
+							className="absolute inset-0"
 							style={{
 								opacity: hidden,
 							}}
@@ -145,39 +143,35 @@ const Homepage = () => {
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
-						factorX={0.2}
+						factorX={0.1}
 						factorY={0.1}
-						className="absolute inset-0 z-[12] hidden min-[1025px]:block"
+						className="absolute right-[-5%] top-[65%] w-xl h-xl z-[12] hidden min-[1025px]:block"
 					>
-						<motion.img
-							src={da}
-							alt="da"
-							style={{ opacity: hidden }}
-							className="absolute w-md h-md xl:w-xl xl:h-xl bottom-[-15%]"
-						/>
+						<motion.img src={da} alt="da" style={{ opacity: hidden }} />
 					</MouseParallaxChild>
-					<MouseParallaxChild
-						factorX={0.2}
-						factorY={0.1}
-						className="absolute inset-0 z-[20] hidden min-[1025px]:block"
-					>
+					<div className="absolute left-0 top-52 w-lg h-xl z-[20] hidden min-[1025px]:block translate-x-[-20%] xl:translate-x-0">
+						<motion.img src={da2} alt="da" style={{ opacity: hidden }} />
+					</div>
+
+					<div className="absolute top-[5%] xl:right-[-28%] right-[-36%] w-180 h-200 z-10 hidden min-[1025px]:block">
 						<motion.img
-							src={da2}
-							alt="da"
-							style={{ opacity: hidden }}
-							className="absolute w-md h-lg xl:w-lg xl:h-xl right-[0%] bottom-[-15%]"
+							src={tree1}
+							alt="tree"
+							style={{
+								opacity: hidden,
+								y,
+							}}
 						/>
-					</MouseParallaxChild>
+					</div>
 
 					<MouseParallaxChild
 						factorX={0.1}
 						factorY={0}
-						className="absolute inset-0 z-10 hidden min-[1025px]:block opacity-90"
+						className="absolute top-[5%] xl:left-[-28%] left-[-36%] w-180 h-200 z-10 hidden min-[1025px]:block -scale-x-100"
 					>
 						<motion.img
 							src={tree1}
 							alt="tree"
-							className="absolute w-180 h-200 right-[-15%]"
 							style={{
 								opacity: hidden,
 								y,
@@ -187,27 +181,15 @@ const Homepage = () => {
 
 					<MouseParallaxChild
 						factorX={0.1}
-						factorY={0}
-						className="absolute inset-0 z-[2] hidden min-[1025px]:block opacity-50"
+						factorY={0.3}
+						className="absolute w-screen bottom-[-44%] left-0 right-0 h-180 z-10 hidden min-[1025px]:block "
 					>
-						<motion.img
-							src={tree1}
-							alt="tree"
-							className="absolute w-180 h-200 -scale-x-100 right-0"
-							style={{
-								opacity: hidden,
-								y,
-							}}
-						/>
-					</MouseParallaxChild>
-
-					<div className="absolute inset-0 z-10 hidden min-[1025px]:block ">
 						<motion.img
 							src={stone}
 							alt="stone"
-							className="absolute bottom-[-10%] scale-x-125"
+							className="w-screen absolute bottom-[44%] scale-x-125"
 						/>
-					</div>
+					</MouseParallaxChild>
 
 					<div className="absolute left-0 right-0 bottom-0 z-10 hidden min-[1025px]:block drop-shadow-lg drop-shadow-black">
 						<motion.img

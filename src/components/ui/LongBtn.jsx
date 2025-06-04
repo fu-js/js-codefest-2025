@@ -1,4 +1,4 @@
-import nut from "../../assets/images/khung.png";
+import nut from "/images/khung.png";
 
 const LongBtn = ({ children }) => {
 	return (

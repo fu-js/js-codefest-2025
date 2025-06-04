@@ -4,7 +4,6 @@ import { TypewriterEffect } from "../components/ui/TextGenerate";
 import Sponsor from "../components/ui/Sponsor";
 import pc from "/intropc.png";
 import mobile from "/intromb.png";
-import sp from "../assets/images/square.webp";
 const words = [
 	{
 		text: "NHÀ",
