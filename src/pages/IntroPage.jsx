@@ -1,8 +1,10 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { TypewriterEffect } from "../components/ui/TextGenerate";
+import Sponsor from "../components/ui/Sponsor";
 import pc from "/intropc.png";
 import mobile from "/intromb.png";
+import sp from "../assets/images/square.webp";
 const words = [
 	{
 		text: "NHÀ",
@@ -53,9 +55,13 @@ const IntroPage = () => {
 					<motion.div>
 						{isViewed && (
 							<>
-								<motion.div className="min-h-[70vh] text-4xl md:text-6xl lg:text-8xl font-bold z-10">
-									<TypewriterEffect words={words} />
+								<motion.div className="">
+									<motion.div className="text-4xl md:text-6xl lg:text-8xl font-bold z-10">
+										<TypewriterEffect words={words} />
+									</motion.div>
+									<Sponsor />
 								</motion.div>
+
 								<motion.div
 									intial={{ opacity: 0, x: -100 }}
 									whileInView={{ opacity: 1, x: 0 }}
@@ -71,7 +77,11 @@ const IntroPage = () => {
 									transition={{ duration: 1, type: "spring" }}
 									className="hidden md:flex w-full items-center justify-center mt-24"
 								>
-									<img src={pc} alt="" className="mx-auto" />
+									<img
+										src={pc}
+										alt=""
+										className="mx-auto md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
+									/>
 								</motion.div>
 								<motion.div
 									initial={{ opacity: 0, x: -50 }}

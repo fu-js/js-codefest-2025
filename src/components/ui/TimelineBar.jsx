@@ -29,12 +29,12 @@ export default function TimelineBar() {
 							Mở đơn đăng ký
 						</div>
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
-							13/08 - 31/08
+							06/06 - 18/06
 						</div>
 						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success md:text-l leading-[2rem]">
 							<li>
-								Các thí sinh đăng ký cá nhân hoặc theo đội (3 - 4 thành
-								viên/đội).
+								Các thí sinh đăng ký cá nhân hoặc theo đội (4 - 5 thành
+								viên/đội)
 							</li>
 							<li>
 								Đối với các thí sinh đăng ký tự do, BTC sẽ hỗ trợ ghép đội cho
@@ -62,7 +62,7 @@ export default function TimelineBar() {
 						</svg>
 					</div>
 					<div
-						className="timeline-end md:mb-10 ml-6 text-xl"
+						className="timeline-end md:mb-10 ml-6 text-xl pb-8"
 						style={{ lineHeight: 2 }}
 					>
 						<div
@@ -72,7 +72,7 @@ export default function TimelineBar() {
 							Giai đoạn Training
 						</div>
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
-							01/09 - 14/09
+							21/06 - 29/06
 						</div>
 						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-xl leading-[2rem]">
 							<li>
@@ -116,12 +116,12 @@ export default function TimelineBar() {
 							Vòng Chung kết
 						</div>
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
-							15/09/2025
+							15/07
 						</div>
 						<p className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success leading-[2rem]">
 							<li>
 								Các đội chơi tham gia thi đấu chính thức tại trường Đại học FPT
-								Hà Nội.
+								Hà Nội (BTC sẽ hỗ trợ xe đưa đón).
 							</li>
 							<li>
 								Đây là lúc các đội đem những con bot mình đã chuẩn bị để tranh

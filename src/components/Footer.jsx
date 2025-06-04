@@ -69,7 +69,7 @@ const Footer = () => {
 						</svg>
 						<div className="lg:text-left text-center">
 							<p>Trưởng ban tổ chức:</p>
-							<p>Updating...</p>
+							<p>Lý Ngọc Mai</p>
 						</div>
 					</div>
 					<div className="flex lg:flex-row flex-col items-center gap-3">
@@ -82,7 +82,7 @@ const Footer = () => {
 							<path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
 							<path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
 						</svg>
-						<a href="mailto:mail@jsclub.dev">mail@jsclub.dev</a>
+						<a href="mailto:mail@jsclub.dev">ngmai23.work@gmail.com</a>
 					</div>
 				</div>
 			</div>

@@ -5,8 +5,8 @@ const faqs = [
 	{
 		id: 1,
 		user: {
-			name: "Tuyền Nhân Minh Quang",
-			avatar: "/naruto.jpg",
+			name: "[Codefest] Team GDD",
+			avatar: "/avatar.webp",
 			lastSeen: "2 phút trước",
 			isOnline: true,
 		},
@@ -21,8 +21,8 @@ const faqs = [
 	{
 		id: 2,
 		user: {
-			name: "Phú Lê",
-			avatar: "/phule.jpg",
+			name: "[Codefest] Team Dev",
+			avatar: "/avatar.webp",
 			lastSeen: "5 phút trước",
 			isOnline: true,
 		},
@@ -35,8 +35,8 @@ const faqs = [
 	{
 		id: 3,
 		user: {
-			name: "Đàm Vĩnh Hưng",
-			avatar: "/dam.jpg",
+			name: "[Codefest] Team Ops",
+			avatar: "/avatar.webp",
 			lastSeen: "10 phút trước",
 			isOnline: false,
 		},
@@ -49,8 +49,8 @@ const faqs = [
 	{
 		id: 4,
 		user: {
-			name: "CEO Nguyễn Tử Quảng",
-			avatar: "/ceo.jpg",
+			name: "[Codefest] Team Art",
+			avatar: "/avatar.webp",
 			lastSeen: "15 phút trước",
 			isOnline: false,
 		},
@@ -64,8 +64,8 @@ const faqs = [
 	{
 		id: 5,
 		user: {
-			name: "Quân đội Hoa Kỳ",
-			avatar: "/usa.jpg",
+			name: "[Codefest] Team Landing Page",
+			avatar: "/avatar.webp",
 			lastSeen: "1 giờ trước",
 			isOnline: false,
 		},
@@ -144,7 +144,7 @@ export function MessengerFAQ() {
 							key={faq.id}
 							className={`flex items-center p-3 md:p-4 hover:bg-base-300 cursor-pointer transition-colors active:bg-primary/70 ${
 								selectedChat.id === faq.id
-									? "bg-primary/50 border-r-2 border-primary"
+									? "bg-primary/50 border-r-2 border-primary font-medium"
 									: ""
 							}`}
 							onClick={() => handleChatSelect(faq)}
@@ -248,7 +248,7 @@ export function MessengerFAQ() {
 					<div className="flex justify-end">
 						<div className="flex items-end space-x-2 max-w-[280px] md:max-w-xs lg:max-w-md">
 							<div className="text-primary-content bg-primary border border-primary rounded-2xl rounded-br-md px-3 md:px-4 py-2">
-								<p className="text-sm leading-relaxed">
+								<p className="text-sm leading-relaxed font-medium">
 									{selectedChat.question}
 								</p>
 							</div>
@@ -313,7 +313,7 @@ export function MessengerFAQ() {
 							/>
 						</div>
 						<button
-							className="p-2 text-secondary hover:text-primary disabled:opacity-50 touch-manipulation"
+							className="p-2 text-secondary hover:text-primary disabled:opacity-50 touch-manipulation rotate-90"
 							disabled
 						>
 							<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">

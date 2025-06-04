@@ -30,7 +30,7 @@ const TimelinePage = () => {
 		<motion.div
 			id="timeline"
 			ref={ref}
-			className="w-full bg-base-300 relative flex flex-col items-center justify-center min-h-screen py-18"
+			className="w-full bg-base-300 relative flex flex-col items-center justify-center min-h-screen py-18 px-20 lg:px-0"
 		>
 			<MouseParallaxContainer
 				globalFactorX={0.1}
