@@ -235,6 +235,7 @@ const Homepage = () => {
 					</motion.div>
 
 					<motion.div
+
 						className="absolute z-[20] bottom-[55%] min-[1025px]:top-[52%] left-[48%] -translate-x-1/2 flex items-center md:gap-4"
 						style={{ scale, y }}
 					>
