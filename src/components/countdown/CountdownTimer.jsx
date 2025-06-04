@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import khung from "../../assets/images/square.webp";
+import khung from "/images/square.webp";
 
 const TimeBlock = ({ children, label }) => (
 	<div

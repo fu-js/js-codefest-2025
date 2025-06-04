@@ -1,6 +1,6 @@
 // FormPage.jsx
 // Optional
-import bgImg from "../assets/images/bgfull.webp";
+import bgImg from "/images/bgfull.webp";
 const FormPage = () => {
 	return (
 		<form

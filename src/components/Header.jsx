@@ -1,6 +1,6 @@
 import { cn } from "../lib/utils";
-import font from "../assets/images/font.png";
-import fontNoGlow from "../assets/images/font_noglow.png";
+import font from "/images/font.png";
+import fontNoGlow from "/images/font_noglow.png";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import useScroll from "./hooks/use-scroll";

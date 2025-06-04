@@ -1,6 +1,6 @@
 // TimelinePage.jsx
 import { motion, useInView, AnimatePresence } from "motion/react";
-import dragon from "../assets/images/dragon.webp";
+import dragon from "/images/dragon.webp";
 import { TypewriterEffect } from "../components/ui/TextGenerate";
 import { useRef } from "react";
 import TimelineBar from "../components/ui/TimelineBar";

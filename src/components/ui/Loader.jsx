@@ -1,6 +1,6 @@
-import congden from "../../assets/images/cong_coden.webp";
-import cong from "../../assets/images/cong.webp";
-import cloud from "../../assets/images/cloud_light.png";
+import congden from "/images/cong_coden.webp";
+import cong from "/images/cong.webp";
+import cloud from "/images/cloud_light.png";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
