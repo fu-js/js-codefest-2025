@@ -74,7 +74,7 @@ const faqs = [
 			"Tham gia CODEFEST 2025, thí sinh đến từ khắp các trường đại học trên toàn miền Bắc sẽ có cơ hội làm quen và phát triển tư duy lập trình, tìm hiểu sâu về các thuật toán điều khiển bot trong môi trường cạnh tranh sáng tạo và đầy cảm hứng.",
 			"Với quy mô mở rộng, CODEFEST 2025 hứa hẹn mang đến một sân chơi công nghệ đa dạng và chuyên nghiệp hơn bao giờ hết, giúp thí sinh không chỉ giao lưu, học hỏi với các bạn cùng đam mê từ nhiều tỉnh thành, mà còn được dẫn dắt bởi đội ngũ cố vấn dày dặn kinh nghiệm từ BTC.",
 			"Bên cạnh những trải nghiệm lập trình thú vị, thí sinh còn được trau dồi kỹ năng làm việc nhóm và tích lũy những kỷ niệm đáng nhớ trong hành trình khám phá bản thân qua từng thử thách của cuộc thi.",
-			"Các đội xuất sắc lọt vào vòng Chung kết sẽ nhận được nhiều quyền lợi hấp dẫn từ Ban Tổ Chức như: hỗ trợ đưa đón hoàn toàn miễn phí tới Trường Đại học FPT Hà Nội, một bữa ăn miễn phí và phần quà đặc biệt dành cho mỗi đội tham gia.",
+			"Các đội xuất sắc lọt vào vòng Chung kết sẽ nhận được nhiều quyền lợi hấp dẫn từ Ban Tổ Chức như: hỗ trợ đưa đón hoàn toàn miễn phí tới Trường Đại học FPT Hà Nội, những khoảnh khắc đáng nhớ và phần quà siêu đặc biệt đến từ vị trí của BTC dành cho mỗi đội tham gia.",
 			"Bên cạnh những trận đấu kịch tính, các đội còn có cơ hội hòa mình vào không gian sự kiện sôi động với các gian hàng độc đáo, hoạt động tương tác thú vị và những tiết mục văn nghệ đặc sắc. Đây không chỉ là nơi để thi đấu, mà còn là dịp để trải nghiệm, kết nối và tạo nên những kỷ niệm khó quên cùng cộng đồng đam mê công nghệ.",
 		],
 	},
@@ -113,12 +113,12 @@ export function MessengerFAQ() {
 	};
 
 	return (
-		<div className="flex h-[70vh] md:h-[80vh] font-sans w-[320px] sm:w-[368px] md:w-2xl lg:w-5xl bg-base-100 shadow-2xl rounded-2xl overflow-hidden border border-primary">
+		<div className=" flex h-[70vh] md:h-[80vh] font-sans w-[320px] sm:w-[368px] md:w-2xl lg:w-5xl bg-base-100 shadow-2xl rounded-2xl overflow-hidden border border-primary">
 			{/* Sidebar */}
 			<div
 				className={`${
 					isMobileView ? (showChatList ? "w-full" : "hidden") : "w-80"
-				} border-r border-primary flex flex-col md:w-80 lg:w-96`}
+				} border-r border-primary flex flex-col md:w-80 lg:w-96 `}
 			>
 				{/* Sidebar Header */}
 				<div className="p-3 md:p-4 border-b border-primary">
@@ -230,13 +230,13 @@ export function MessengerFAQ() {
 						</div>
 						<div className="flex items-center space-x-2">
 							<button className="p-2 text-base-content/70 hover:text-primary-content rounded-full hover:bg-primary">
-								<Phone className="w-5 h-5" />
+								<Phone className="w-5 h-5  cursor-pointer" />
 							</button>
 							<button className="p-2 text-base-content/70 hover:text-primary-content rounded-full hover:bg-primary">
-								<Video className="w-5 h-5" />
+								<Video className="w-5 h-5  cursor-pointer" />
 							</button>
 							<button className="p-2 text-base-content/70 hover:text-primary-content rounded-full hover:bg-primary">
-								<Info className="w-5 h-5" />
+								<Info className="w-5 h-5 cursor-pointer" />
 							</button>
 						</div>
 					</div>
@@ -313,7 +313,7 @@ export function MessengerFAQ() {
 							/>
 						</div>
 						<button
-							className="p-2 text-secondary hover:text-primary disabled:opacity-50 touch-manipulation rotate-90"
+							className=" cursor-not-allowed p-2 text-secondary hover:text-primary disabled:opacity-50 touch-manipulation rotate-90"
 							disabled
 						>
 							<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">

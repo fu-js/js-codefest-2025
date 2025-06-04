@@ -35,7 +35,7 @@ const QuestionPage = () => {
 			<AnimatePresence mode="wait">
 				{isViewed && (
 					<>
-						<motion.div className="flex flex-col justify-center items-center gap-24">
+						<motion.div className="flex flex-col justify-center items-center gap-24 ">
 							<motion.div
 								intial={{ opacity: 0, x: -100 }}
 								whileInView={{ opacity: 1, x: 0 }}
