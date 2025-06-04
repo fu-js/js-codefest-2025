@@ -1,47 +1,61 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-	themes: night --default;
+  themes: night --default;
 }
 
 @font-face {
-	font-family: "Harry Potter";
-	src: url("./assets/fonts/HARRYPOTTER.TTF") format("truetype");
-	font-weight: 400;
-	font-style: normal;
+  font-family: "Harry Potter";
+  src: url("./assets/fonts/HARRYPOTTER.TTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-	font-family: "DenkOne";
-	src: url("./assets/fonts/DenkOne.ttf") format("truetype");
+  font-family: "DenkOne";
+  src: url("./assets/fonts/DenkOne.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Neusa";
-	src: url("./assets/fonts/NEUSA.ttf") format("truetype");
+  font-family: "Neusa";
+  src: url("./assets/fonts/NEUSA.ttf") format("truetype");
 }
 
 @theme {
-	--font-HP: "Harry Potter", sans-serif;
-	--font-DenkOne: "DenkOne", sans-serif;
-	--font-Neusa: "Neusa", sans-serif;
+  --font-HP: "Harry Potter", sans-serif;
+  --font-DenkOne: "DenkOne", sans-serif;
+  --font-Neusa: "Neusa", sans-serif;
 }
 
 @theme inline {
-	--animate-scroll: scroll var(--animation-duration, 40s)
-		var(--animation-direction, forwards) linear infinite;
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
 
-	@keyframes scroll {
-		to {
-			transform: translate(calc(-50% - 0.5rem));
-		}
-	}
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
 }
 
 .icon-fill {
-	fill: #92acfa !important;
+  fill: #92acfa !important;
 }
 
 @layer base {
-	html {
-		scroll-behavior: smooth;
-	}
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.animate-bounce-linear {
+  animation: bounce-linear 4s linear infinite;
+}
+
+@keyframes bounce-linear {
+  0%,
+  100% {
+    transform: translateY(-2%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
 }

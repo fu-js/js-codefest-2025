@@ -1,6 +1,7 @@
 import { cn } from "../lib/utils";
 import font from "../assets/images/font.png";
 import fontNoGlow from "../assets/images/font_noglow.png";
+import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import useScroll from "./hooks/use-scroll";
 const navItems1 = [
@@ -28,11 +29,11 @@ const Header = () => {
 					"fixed top-0 left-0 right-0 p-4 z-[1000] uppercase font-bold text-xl transition-all duration-300",
 					scroll > 100
 						? "bg-white text-[#1D2C48] shadow-xs"
-						: "bg-gradient-to-b from-[#1D2C48] to-transparent text-white"
+						: "bg-gradient-to-b from-[#0b1424] to-transparent text-white"
 				)}
 			>
 				{/* Desktop header  */}
-				<div className="hidden lg:block container mx-auto font-HP tracking-wider">
+				<div className="hidden lg:block container mx-auto px-0 xl:px-6 font-HP tracking-wider">
 					<nav className="flex items-center justify-between">
 						{navItems1.map((item, index) => (
 							<a
@@ -59,38 +60,53 @@ const Header = () => {
 				{/* Mobile header  */}
 				<div className="lg:hidden container mx-auto flex justify-between items-center font-HP tracking-wider">
 					<Logo glow={true} />
-					<button className="btn btn-ghost" onClick={handleOpen}>
+					<button className="btn btn-ghost z-50" onClick={handleOpen}>
 						{isOpen ? <CloseIcon /> : <MenuIcon />}
 					</button>
 				</div>
-
-				{isOpen && (
-					<nav
-						className="flex flex-col items-center justify-center gap-4 font-HP tracking-wider z-10"
-						onClick={handleOpen}
-					>
-						{navItems1.map((item, index) => (
-							<a
-								key={index}
-								href={item.to}
-								className=" flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center text-nowrap"
+				<AnimatePresence mode="wait">
+					{isOpen && (
+						<motion.div className="fixed inset-0 w-full h-full overflow-hidden">
+							<motion.div
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 0.5 }}
+								exit={{ opacity: 0 }}
+								transition={{ duration: 0.5 }}
+								className="absolute inset-0 w-full h-full bg-black -z-10"
+								onClick={handleOpen}
+							></motion.div>
+							<motion.nav
+								initial={{ x: "-100%" }}
+								animate={{ x: 0 }}
+								exit={{ x: "-100%" }}
+								transition={{ duration: 0.5, ease: "easeInOut" }}
+								className="w-3/4 h-full flex flex-col items-center justify-center gap-4 font-HP tracking-wider bg-[#0b1424] text-white z-50"
 								onClick={handleOpen}
 							>
-								{item.label}
-							</a>
-						))}
-						{navItems2.map((item, index) => (
-							<a
-								key={index}
-								href={item.to}
-								className=" flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-nowrap"
-								onClick={handleOpen}
-							>
-								{item.label}
-							</a>
-						))}
-					</nav>
-				)}
+								{navItems1.map((item, index) => (
+									<a
+										key={index}
+										href={item.to}
+										className=" flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-center text-nowrap"
+										onClick={handleOpen}
+									>
+										{item.label}
+									</a>
+								))}
+								{navItems2.map((item, index) => (
+									<a
+										key={index}
+										href={item.to}
+										className=" flex items-center justify-center stroke-2 stroke-primary cursor-pointer hover:text-secondary transition-colors duration-300 text-nowrap"
+										onClick={handleOpen}
+									>
+										{item.label}
+									</a>
+								))}
+							</motion.nav>
+						</motion.div>
+					)}
+				</AnimatePresence>
 			</header>
 		</>
 	);

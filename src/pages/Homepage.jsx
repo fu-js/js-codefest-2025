@@ -56,7 +56,7 @@ const Homepage = () => {
 					className="w-full h-screen"
 				>
 					<div
-						className="bg inset-0 w-full h-full z-0 absolute hidden lg:block"
+						className="bg inset-0 w-full h-full z-0 absolute hidden min-[1025px]:block"
 						style={{
 							backgroundImage: `url(${bgImg})`,
 							backgroundSize: "cover",
@@ -66,7 +66,7 @@ const Homepage = () => {
 						}}
 					></div>
 					<div
-						className="bg inset-0 w-full h-full z-0 absolute block lg:hidden"
+						className="bg inset-0 w-full h-full z-0 absolute block min-[1025px]:hidden opacity-75"
 						style={{
 							backgroundImage: `url(${bgImg2})`,
 							backgroundSize: "cover",
@@ -77,7 +77,7 @@ const Homepage = () => {
 					></div>
 
 					<img
-						className="absolute inset-0 scale-150 w-full h-full z-10 hidden lg:block"
+						className="absolute inset-0 scale-150 w-full h-full z-10 hidden min-[1025px]:block"
 						style={{
 							backgroundImage: `url(${light2})`,
 							backgroundSize: "contain",
@@ -86,9 +86,9 @@ const Homepage = () => {
 					/>
 
 					<MouseParallaxChild
-						factorX={0.5}
+						factorX={0.2}
 						factorY={0.3}
-						className="absolute top-[-15%] left-[-15%] w-180 h-200 z-10 hidden lg:block opacity-50"
+						className="absolute top-[-15%] xl:left-[-15%] left-[-11%] w-180 h-200 z-10 hidden min-[1025px]:block opacity-50"
 					>
 						<motion.img
 							src={tree2}
@@ -102,7 +102,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.2}
 						factorY={0.4}
-						className="absolute top-[10%] left-[-5%] md:left-0 w-2xl h-xl z-10 hidden lg:block opacity-75"
+						className="absolute top-[2%] left-[-5%] md:left-16 w-2xl h-xl z-10 hidden xl:block opacity-80"
 					>
 						<motion.img
 							src={drG}
@@ -115,9 +115,9 @@ const Homepage = () => {
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
-						factorX={0.5}
-						factorY={0.3}
-						className="absolute top-[0%] right-[-20%] w-180 h-200 z-10 hidden lg:block"
+						factorX={0.4}
+						factorY={0.2}
+						className="absolute top-[-5%] xl:right-[-8%] right-[-4%] w-180 h-200 z-10 hidden min-[1025px]:block opacity-40 -scale-x-100"
 					>
 						<motion.img
 							src={tree1}
@@ -129,9 +129,9 @@ const Homepage = () => {
 					</MouseParallaxChild>
 
 					<MouseParallaxChild
-						factorX={0.2}
-						factorY={0.4}
-						className="absolute right-0 lg:right-[15%] -translate-y-12 w-2xl h-xl z-10 hidden lg:block"
+						factorX={0.3}
+						factorY={0.3}
+						className="absolute right-0 min-[1025px]:right-[12%] -translate-y-36 w-3xl h-xl z-10 hidden xl:block"
 					>
 						<motion.img
 							src={tran}
@@ -145,23 +145,30 @@ const Homepage = () => {
 
 					<MouseParallaxChild
 						factorX={0.1}
-						factorY={0.3}
-						className="absolute right-[-5%] top-[65%] w-xl h-xl z-[12] hidden lg:block"
+						factorY={0.1}
+						className="absolute right-[-5%] top-[65%] w-xl h-xl z-[12] hidden min-[1025px]:block"
 					>
 						<motion.img src={da} alt="da" style={{ opacity: hidden }} />
 					</MouseParallaxChild>
-					<MouseParallaxChild
-						factorX={0.1}
-						factorY={0.3}
-						className="absolute left-0 top-52 w-lg h-xl z-[20] hidden lg:block"
-					>
+					<div className="absolute left-0 top-52 w-lg h-xl z-[20] hidden min-[1025px]:block translate-x-[-20%] xl:translate-x-0">
 						<motion.img src={da2} alt="da" style={{ opacity: hidden }} />
-					</MouseParallaxChild>
+					</div>
+
+					<div className="absolute top-[5%] xl:right-[-28%] right-[-36%] w-180 h-200 z-10 hidden min-[1025px]:block">
+						<motion.img
+							src={tree1}
+							alt="tree"
+							style={{
+								opacity: hidden,
+								y,
+							}}
+						/>
+					</div>
 
 					<MouseParallaxChild
-						factorX={0.5}
-						factorY={0.3}
-						className="absolute top-[0%] right-[-20%] w-180 h-200 z-10 hidden lg:block "
+						factorX={0.1}
+						factorY={0}
+						className="absolute top-[5%] xl:left-[-28%] left-[-36%] w-180 h-200 z-10 hidden min-[1025px]:block -scale-x-100"
 					>
 						<motion.img
 							src={tree1}
@@ -176,7 +183,7 @@ const Homepage = () => {
 					<MouseParallaxChild
 						factorX={0.1}
 						factorY={0.3}
-						className="absolute w-screen bottom-[-44%] left-0 right-0 h-180 z-10 hidden lg:block "
+						className="absolute w-screen bottom-[-44%] left-0 right-0 h-180 z-10 hidden min-[1025px]:block "
 					>
 						<motion.img
 							src={stone}
@@ -185,7 +192,7 @@ const Homepage = () => {
 						/>
 					</MouseParallaxChild>
 
-					<div className="absolute left-0 right-0 bottom-0 z-10 hidden lg:block">
+					<div className="absolute left-0 right-0 bottom-0 z-10 hidden min-[1025px]:block drop-shadow-lg drop-shadow-black">
 						<motion.img
 							src={land}
 							alt="land"
@@ -195,7 +202,7 @@ const Homepage = () => {
 
 						<a href="/intro">
 							<motion.img
-								className="absolute w-64 lg:w-[360px] left-1/2 translate-x-[-62%] md:bottom-[45%] h-auto z-10 cursor-pointer"
+								className="drop-shadow-sm drop-shadow-black absolute w-64 min-[1025px]:w-[320px] xl:w-[370px] left-1/2 translate-x-[-59%] md:bottom-[45%] h-auto z-10 cursor-pointer"
 								src={cong}
 								style={{
 									scale: scaleCong,
@@ -228,19 +235,19 @@ const Homepage = () => {
 					</motion.div>
 
 					<motion.div
-						className="absolute z-[20] bottom-[50%] top-[40%] lg:top-[52%] left-[48%] -translate-x-1/2 flex flex-col md:flex-row items-center gap-4"
+						className="absolute z-[20] bottom-[55%] min-[1025px]:top-[52%] left-[48%] -translate-x-1/2 flex items-center md:gap-4"
 						style={{ scale, y }}
 					>
-						<a href="">
+						<a href="#" className="drop-shadow-lg drop-shadow-black">
 							<LongBtn>Thể lệ cuộc thi</LongBtn>
 						</a>
-						<a href="">
+						<a href="#" className="drop-shadow-lg drop-shadow-black">
 							<LongBtn>Đăng ký</LongBtn>
 						</a>
 					</motion.div>
 
 					<motion.img
-						className="absolute w-2xl left-1/2 translate-x-[-50%] lg:-translate-x-[55%] top-[15%] lg:top-[20%] z-[50]"
+						className="absolute w-lg md:w-xl min-[1025px]:w-2xl left-1/2 translate-x-[-50%] min-[1025px]:-translate-x-[55%] top-[10%] min-[1025px]:top-[20%] z-[50]"
 						src={font}
 						style={{ scale: scaleFont, y }}
 					/>
