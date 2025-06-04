@@ -3,7 +3,7 @@ import khung from "../../assets/images/square.webp";
 
 const TimeBlock = ({ children, label }) => (
 	<div
-		className="text-center size-30 lg:size-38 flex flex-col items-center justify-center"
+		className="drop-shadow-lg drop-shadow-black text-center size-30 lg:size-38 flex flex-col items-center justify-center"
 		style={{ backgroundImage: `url(${khung})`, backgroundSize: "cover" }}
 	>
 		<p className="text-white text-stroke font-HP font-extrabold text-4xl lg:text-5xl drop-shadow-[4px_4px_#1D2C48]">
@@ -49,7 +49,7 @@ export default function Countdown() {
 		return () => clearInterval(timer);
 	}, [deadline]);
 	return (
-		<div className="flex justify-center gap-44 lg:justify-between items-center w-full max-w-4xl lg:max-w-7xl mx-auto">
+		<div className="flex justify-center gap-44 lg:justify-between items-center w-full max-w-4xl lg:max-w-7xl mx-auto mb-10">
 			<div className="flex flex-col lg:flex-row justify-between items-center">
 				<TimeBlock label="Ngày">{timeLeft.days}</TimeBlock>
 				<TimeBlock label="Giờ">{timeLeft.hrs}</TimeBlock>

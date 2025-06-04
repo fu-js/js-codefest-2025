@@ -28,11 +28,11 @@ const Header = () => {
 					"fixed top-0 left-0 right-0 p-4 z-[1000] uppercase font-bold text-xl transition-all duration-300",
 					scroll > 100
 						? "bg-white text-[#1D2C48] shadow-xs"
-						: "bg-gradient-to-b from-[#1D2C48] to-transparent text-white"
+						: "bg-gradient-to-b from-[#0b1424] to-transparent text-white"
 				)}
 			>
 				{/* Desktop header  */}
-				<div className="hidden lg:block container mx-auto font-HP tracking-wider">
+				<div className="hidden lg:block container mx-auto px-0 xl:px-6 font-HP tracking-wider">
 					<nav className="flex items-center justify-between">
 						{navItems1.map((item, index) => (
 							<a

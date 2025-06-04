@@ -71,7 +71,7 @@ const ReasonPage = () => {
 						initial={{ opacity: 0, x: -100, scale: 0.8 }}
 						whileInView={{ opacity: 1, x: 0, scale: 1.5 }}
 						transition={{ duration: 0.3, ease: "easeInOut" }}
-						className="absolute right-0 md:left-[45%] transform md:translate-x-1/2 bottom-0 size-56 md:size-64 lg:size-80 object-cover z-10"
+						className="absolute right-0 left-[50%] md:left-[45%] transform md:translate-x-24 bottom-0 size-72 md:size-80 lg:size-[26rem] object-cover z-10 animate-bounce-linear drop-shadow-2xl drop-shadow-[#ffffff55]"
 						style={{
 							backgroundImage: `url(${hero})`,
 							backgroundSize: "cover",
@@ -102,27 +102,27 @@ const ReasonPage = () => {
 										</TypingAnimation>
 
 										<AnimatedSpan delay={1500} className="text-green-500">
-											<span>✔ Cơ cấu giải thưởng HẤP DẪN</span>
+											<span className="text-lg md:text-2xl">✔ Cơ cấu giải thưởng HẤP DẪN</span>
 										</AnimatedSpan>
 
 										<AnimatedSpan delay={2000} className="text-green-500">
-											<span>✔ Cơ hội HỌC TẬP và RÈN LUYỆN</span>
+											<span className="text-lg md:text-2xl">✔ Cơ hội HỌC TẬP và RÈN LUYỆN</span>
 										</AnimatedSpan>
 
 										<AnimatedSpan delay={2500} className="text-green-500">
-											<span>✔ Nâng cao KIẾN THỨC và KĨ NĂNG lập trình</span>
+											<span className="text-lg md:text-2xl">✔ Nâng cao KIẾN THỨC và KĨ NĂNG lập trình</span>
 										</AnimatedSpan>
 
 										<AnimatedSpan delay={3000} className="text-green-500">
-											<span>✔ Mở rộng mạng lưới KẾT NỐI</span>
+											<span className="text-lg md:text-2xl">✔ Mở rộng mạng lưới KẾT NỐI</span>
 										</AnimatedSpan>
 
 										<AnimatedSpan delay={3500} className="text-green-500">
-											<span>✔ Phát triển các KỸ NĂNG MỀM</span>
+											<span className="text-lg md:text-2xl">✔ Phát triển các KỸ NĂNG MỀM</span>
 										</AnimatedSpan>
 
 										<AnimatedSpan delay={4000} className="text-green-500">
-											<span>✔ Installing dependencies</span>
+											<span className="text-lg md:text-2xl">✔ Installing dependencies</span>
 										</AnimatedSpan>
 
 										<AnimatedSpan delay={4500} className="text-blue-500">
@@ -134,7 +134,7 @@ const ReasonPage = () => {
 											Success! 😎.
 										</TypingAnimation>
 
-										<TypingAnimation delay={5500} className="text-base-content">
+										<TypingAnimation delay={5500} className="text-base-content text-lg md:text-2xl">
 											Chúc bạn thi đấu thành công!
 										</TypingAnimation>
 									</Terminal>

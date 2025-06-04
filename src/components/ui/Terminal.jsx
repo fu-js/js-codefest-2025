@@ -80,7 +80,7 @@ export const Terminal = ({ children, className }) => {
 	return (
 		<div
 			className={cn(
-				"z-0 h-full max-h-[500px] min-w-md lg:min-w-3xl w-full rounded-xl border border-primary bg-base-100",
+				"drop-shadow-xl drop-shadow-[#00000032] z-0 h-full max-h-[500px] min-w-md lg:min-w-3xl w-full rounded-xl border border-primary bg-base-100",
 				className
 			)}
 		>
