@@ -60,9 +60,9 @@ const Homepage = () => {
 						style={{
 							backgroundImage: `url(${isMobile ? bgImg2 : bgImg})`,
 							backgroundSize: "cover",
-							backgroundPosition: "center",
+							backgroundPosition: isMobile ? "" : "center",
 							backgroundRepeat: "no-repeat",
-							backgroundAttachment: "fixed",
+							backgroundAttachment: isMobile ? "" : "fixed",
 						}}
 					></div>
 
