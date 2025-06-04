@@ -14,19 +14,20 @@ import da from "/images/da2_bg.webp";
 import da2 from "/images/da3.webp";
 import font from "/images/font.png";
 import light2 from "/images/cloud_light.png";
+import { useIsMobile } from "../components/hooks/use-mobile";
 
 import {
 	MouseParallaxContainer,
 	MouseParallaxChild,
 } from "react-parallax-mouse";
 import CountdownTimer from "../components/countdown/CountdownTimer";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import LongBtn from "../components/ui/LongBtn";
 
 const Homepage = () => {
 	const ref = useRef(null);
-
+	const isMobile = useIsMobile();
 	const { scrollY } = useScroll({
 		target: ref,
 		offset: ["start end", "end start"],
@@ -55,19 +56,9 @@ const Homepage = () => {
 					className="w-full h-screen"
 				>
 					<div
-						className="bg inset-0 w-full h-full z-0 absolute hidden min-[1025px]:block"
+						className="bg inset-0 w-full h-full z-0 absolute"
 						style={{
-							backgroundImage: `url(${bgImg})`,
-							backgroundSize: "cover",
-							backgroundPosition: "center",
-							backgroundRepeat: "no-repeat",
-							backgroundAttachment: "fixed",
-						}}
-					></div>
-					<div
-						className="bg inset-0 w-full h-full z-0 absolute block min-[1025px]:hidden opacity-75"
-						style={{
-							backgroundImage: `url(${bgImg2})`,
+							backgroundImage: `url(${isMobile ? bgImg2 : bgImg})`,
 							backgroundSize: "cover",
 							backgroundPosition: "center",
 							backgroundRepeat: "no-repeat",
@@ -255,7 +246,12 @@ const Homepage = () => {
 						className="absolute z-[20] bottom-[55%] min-[1025px]:top-[52%] left-[48%] -translate-x-1/2 flex items-center md:gap-4"
 						style={{ scale, y }}
 					>
-						<a href="#" className="drop-shadow-lg drop-shadow-black">
+						<a
+							href="https://s.jsclub.dev/cdcrsh"
+							target="_blank"
+							rel="noreferrer"
+							className="drop-shadow-lg drop-shadow-black"
+						>
 							<LongBtn>Thể lệ cuộc thi</LongBtn>
 						</a>
 						<a href="#" className="drop-shadow-lg drop-shadow-black">
