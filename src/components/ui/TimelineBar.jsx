@@ -71,7 +71,7 @@ export default function TimelineBar() {
 							Giai đoạn Training
 						</div>
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
-							21/06 - 29/06
+							19/06 - 29/06
 						</div>
 						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-sm md:text-xl leading-[2rem]">
 							<li>
@@ -86,6 +86,50 @@ export default function TimelineBar() {
 							<li>
 								Đồng thời các đội thi sẽ phát triển và tối ưu hero của riêng
 								mình.
+							</li>
+						</ul>
+					</div>
+					<hr className="bg-success" />
+				</li>
+				<li>
+					<hr className="bg-success" />
+
+					<div className="timeline-middle btn btn-circle btn-success">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							className="size-5"
+						>
+							<path
+								fillRule="evenodd"
+								d="M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V6Zm3.97.97a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Zm4.28 4.28a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z"
+								clipRule="evenodd"
+							/>
+						</svg>
+					</div>
+					<div
+						className="timeline-end md:mb-10 ml-6 text-xl pb-6"
+						style={{ lineHeight: 2 }}
+					>
+						<div
+							className="md:text-4xl text-3xl text-warning font-HP mb-2 uppercase"
+							style={{ lineHeight: 1.5 }}
+						>
+							VÒNG LOẠI
+						</div>
+						<div className="font-HP text-xl md:text-2xl btn btn-success">
+							03/07 - 10/07
+						</div>
+						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-sm md:text-xl leading-[2rem]">
+							<li>
+								Hình thức thi đấu: Online
+							</li>
+							<li>
+								Vòng loại 1 diễn ra vào ngày 3/7, vòng loại 2 diễn ra vào ngày 10/7.
+							</li>
+							<li>
+								Thời điểm các đội thi đưa những đứa con tinh thần của mình ra chiến trường khốc liệt.
 							</li>
 						</ul>
 					</div>
