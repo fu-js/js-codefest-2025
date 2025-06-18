@@ -29,7 +29,7 @@ export default function TimelineBar() {
 							Mở đơn đăng ký
 						</div>
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
-							06/06 - 18/06
+							06/06 - 22/06
 						</div>
 						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-sm md:text-xl leading-[2rem]">
 							<li>
@@ -71,7 +71,7 @@ export default function TimelineBar() {
 							Giai đoạn Training
 						</div>
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
-							19/06 - 29/06
+							25/06 - 28/06
 						</div>
 						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-sm md:text-xl leading-[2rem]">
 							<li>
@@ -119,14 +119,14 @@ export default function TimelineBar() {
 							VÒNG LOẠI
 						</div>
 						<div className="font-HP text-xl md:text-2xl btn btn-success">
-							03/07 - 10/07
+							05/07 - 10/07
 						</div>
 						<ul className="pl-5 mt-8 space-y-3 font-DenkOne list-disc marker:text-success text-sm md:text-xl leading-[2rem]">
 							<li>
 								Hình thức thi đấu: Online
 							</li>
 							<li>
-								Vòng loại 1 diễn ra vào ngày 3/7, vòng loại 2 diễn ra vào ngày 10/7.
+								Vòng loại 1 diễn ra vào ngày 5/7, vòng loại 2 diễn ra vào ngày 10/7.
 							</li>
 							<li>
 								Thời điểm các đội thi đưa những đứa con tinh thần của mình ra chiến trường khốc liệt.

@@ -16,7 +16,7 @@ const TimeBlock = ({ children, label }) => (
 );
 
 export default function Countdown() {
-	const deadline = useMemo(() => new Date("2025-06-18T23:59:59").getTime(), []);
+	const deadline = useMemo(() => new Date("2025-06-22T20:00:00").getTime(), []);
 	const [timeLeft, setTimeLeft] = useState({
 		days: 0,
 		hrs: 0,
