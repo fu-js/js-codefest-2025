@@ -254,12 +254,12 @@ const Homepage = () => {
             >
               <LongBtn>Thể lệ cuộc thi</LongBtn>
             </a>
-            <a
+            {/* <a
               href="https://forms.gle/Exw5vAf8vAKiJNxZ7"
               className="drop-shadow-lg drop-shadow-black"
             >
               <LongBtn>Đăng ký</LongBtn>
-            </a>
+            </a> */}
           </motion.div>
 
           <motion.img
